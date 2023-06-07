@@ -1,0 +1,131 @@
+@use "./reset" as reset;
+@use "./animation" as animation;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat";
+  color: white;
+  background-color: #000000;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+}
+
+.btn-done {
+  position: fixed;
+  top: 20%;
+  padding: 10px 30px;
+  font-size: 1.4rem;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  color: white;
+  transition: 0.6s;
+  z-index: 11;
+}
+
+.btn-done:hover {
+  background-color: white;
+  color: black;
+}
+
+.done {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/done.jpg");
+  background-position: center;
+  background-size: 170%;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.disable {
+  display: none;
+}
+
+.room {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 400px;
+  height: 500px;
+  //background-color: red;
+  .floor {
+    width: 100%;
+    height: 45%;
+    background-image: url("../img/floor.png");
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: transform 1s;
+    animation: floor 1s ease;
+    z-index: -10;
+    .floor-wood {
+      width: 100%;
+      height: 100%;
+      transform: translateY(-500%);
+      background-image: url("../img/floor-wood.png");
+      background-position: bottom;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      animation: floor-wood 0.5s ease 1s forwards;
+      z-index: -9;
+      opacity: 0;
+    }
+  }
+  .wall-left {
+    position: absolute;
+    top: 32%;
+    left: -3%;
+    width: 60%;
+    height: 43%;
+    transform: translateY(-500%);
+    background-image: url("../img/wall-left.png");
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: wall-left 0.5s ease-out 1.3s forwards;
+  }
+  .wall-right {
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    width: 50%;
+    height: 43%;
+    transform: translateY(-500%);
+    background-image: url("../img/wall-right.png");
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -5;
+    animation: wall-left 0.5s ease-out 1.5s forwards;
+  }
+  .flower-left {
+    position: absolute;
+    top: 46%;
+    left: 3%;
+    width: 15%;
+    height: 30%;
+    background-image: url("../img/flower-left.png");
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: flower-left 0.5s ease-out 1.7s forwards;
+    transition: left 1s;
+    opacity: 0;
+  }
+  .flower-left:hover {
+    left: calc(3% + 1%);
+  }
+}
+
+@import "./media";
+
+//animation: lines 0.2s infinite linear;

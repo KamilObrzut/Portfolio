@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes floor {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+}
+@keyframes floor-wood {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes wall-left {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes wall-right {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes flower-left {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat";
+  color: white;
+  background-color: #000000;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+}
+
+.btn-done {
+  position: fixed;
+  top: 20%;
+  padding: 10px 30px;
+  font-size: 1.4rem;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  color: white;
+  transition: 0.6s;
+  z-index: 11;
+}
+
+.btn-done:hover {
+  background-color: white;
+  color: black;
+}
+
+.done {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/done.jpg");
+  background-position: center;
+  background-size: 170%;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.disable {
+  display: none;
+}
+
+.room {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 400px;
+  height: 500px;
+}
+.room .floor {
+  width: 100%;
+  height: 45%;
+  background-image: url("../img/floor.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: transform 1s;
+  animation: floor 1s ease;
+  z-index: -10;
+}
+.room .floor .floor-wood {
+  width: 100%;
+  height: 100%;
+  transform: translateY(-500%);
+  background-image: url("../img/floor-wood.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: floor-wood 0.5s ease 1s forwards;
+  z-index: -9;
+  opacity: 0;
+}
+.room .wall-left {
+  position: absolute;
+  top: 32%;
+  left: -3%;
+  width: 60%;
+  height: 43%;
+  transform: translateY(-500%);
+  background-image: url("../img/wall-left.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: wall-left 0.5s ease-out 1.3s forwards;
+}
+.room .wall-right {
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  width: 50%;
+  height: 43%;
+  transform: translateY(-500%);
+  background-image: url("../img/wall-right.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: -5;
+  animation: wall-left 0.5s ease-out 1.5s forwards;
+}
+.room .flower-left {
+  position: absolute;
+  top: 46%;
+  left: 3%;
+  width: 15%;
+  height: 30%;
+  background-image: url("../img/flower-left.png");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: flower-left 0.5s ease-out 1.7s forwards;
+  transition: left 1s;
+  opacity: 0;
+}
+.room .flower-left:hover {
+  left: 4%;
+}
+
+@media (min-width: 667px) {
+  .btn-done {
+    top: 5%;
+  }
+  .done {
+    background-size: 100%;
+  }
+  .room {
+    width: 400px;
+    height: 400px;
+  }
+  .room .floor {
+    width: 100%;
+    height: 55%;
+  }
+  .room .wall-left {
+    top: 14%;
+    left: -3%;
+    width: 60%;
+    height: 55%;
+  }
+  .room .wall-right {
+    top: 14%;
+    left: 50%;
+    width: 50%;
+    height: 54%;
+  }
+  .room .flower-left {
+    top: 41%;
+  }
+}
+@media (min-width: 667px) and (min-height: 600px) {
+  .btn-done {
+    top: 10%;
+  }
+  .room {
+    width: 600px;
+    height: 600px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+@media (min-width: 667px) {
+  .btn-done {
+    top: 5%;
+  }
+  .done {
+    background-size: 100%;
+  }
+  .room {
+    width: 400px;
+    height: 400px;
+    .floor {
+      width: 100%;
+      height: 55%;
+    }
+    .wall-left {
+      top: 14%;
+      left: -3%;
+      width: 60%;
+      height: 55%;
+    }
+    .wall-right {
+      top: 14%;
+      left: 50%;
+      width: 50%;
+      height: 54%;
+    }
+    .flower-left {
+      top: 41%;
+    }
+  }
+}
+
+@media (min-width: 667px) and (min-height: 600px) {
+  .btn-done {
+    top: 10%;
+  }
+  .room {
+    width: 600px;
+    height: 600px;
+  }
+}
