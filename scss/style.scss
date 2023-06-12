@@ -109,10 +109,10 @@ body {
   }
   .flower-left {
     position: absolute;
-    top: 46%;
+    top: 43%;
     left: 3%;
-    width: 15%;
-    height: 30%;
+    width: 18%;
+    height: 35%;
     background-image: url("../img/flower-left.png");
     background-position: bottom;
     background-size: 100%;
@@ -120,12 +120,63 @@ body {
     animation: flower-left 0.5s ease-out 1.7s forwards;
     transition: left 1s;
     opacity: 0;
+    z-index: 2;
   }
   .flower-left:hover {
     left: calc(3% + 1%);
   }
+  .flower-mid {
+    position: absolute;
+    top: 44%;
+    left: 48%;
+    width: 12%;
+    height: 24%;
+    background-image: url("../img/flower-mid.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: flower-mid 0.5s ease-out 1.9s forwards;
+    transition: top 1s;
+    opacity: 0;
+  }
+  .flower-mid:hover {
+    top: calc(44% + 1%);
+  }
+  .flower-right {
+    position: absolute;
+    top: 52%;
+    left: 79%;
+    width: 20%;
+    height: 30%;
+    background-image: url("../img/flower-right.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: flower-mid 0.5s ease-out 1.8s forwards;
+    transition: left 1s;
+    opacity: 0;
+  }
+  .flower-right:hover {
+    left: calc(79% - 1%);
+  }
+  .dresser {
+    position: absolute;
+    top: 45%;
+    left: 17%;
+    width: 33%;
+    height: 33%;
+    background-image: url("../img/dresser.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: dresser 0.5s ease-out 1.5s forwards;
+    transition: background-image 1s;
+    opacity: 0;
+  }
+  .dresser:hover {
+    background-image: url("../img/dresser-hover.png");
+  }
 }
 
 @import "./media";
-
-//animation: lines 0.2s infinite linear;

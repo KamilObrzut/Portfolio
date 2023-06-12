@@ -57,6 +57,33 @@
     opacity: 1;
   }
 }
+@keyframes flower-mid {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes flower-right {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes dresser {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 html {
   font-size: 10px;
 }
@@ -165,10 +192,10 @@ body {
 }
 .room .flower-left {
   position: absolute;
-  top: 46%;
+  top: 43%;
   left: 3%;
-  width: 15%;
-  height: 30%;
+  width: 18%;
+  height: 35%;
   background-image: url("../img/flower-left.png");
   background-position: bottom;
   background-size: 100%;
@@ -176,9 +203,62 @@ body {
   animation: flower-left 0.5s ease-out 1.7s forwards;
   transition: left 1s;
   opacity: 0;
+  z-index: 2;
 }
 .room .flower-left:hover {
   left: 4%;
+}
+.room .flower-mid {
+  position: absolute;
+  top: 44%;
+  left: 48%;
+  width: 12%;
+  height: 24%;
+  background-image: url("../img/flower-mid.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: flower-mid 0.5s ease-out 1.9s forwards;
+  transition: top 1s;
+  opacity: 0;
+}
+.room .flower-mid:hover {
+  top: 45%;
+}
+.room .flower-right {
+  position: absolute;
+  top: 52%;
+  left: 79%;
+  width: 20%;
+  height: 30%;
+  background-image: url("../img/flower-right.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: flower-mid 0.5s ease-out 1.8s forwards;
+  transition: left 1s;
+  opacity: 0;
+}
+.room .flower-right:hover {
+  left: 78%;
+}
+.room .dresser {
+  position: absolute;
+  top: 45%;
+  left: 17%;
+  width: 33%;
+  height: 33%;
+  background-image: url("../img/dresser.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: dresser 0.5s ease-out 1.5s forwards;
+  transition: background-image 1s;
+  opacity: 0;
+}
+.room .dresser:hover {
+  background-image: url("../img/dresser-hover.png");
 }
 
 @media (min-width: 667px) {
@@ -209,7 +289,22 @@ body {
     height: 54%;
   }
   .room .flower-left {
-    top: 41%;
+    top: 37%;
+  }
+  .room .flower-mid {
+    top: 34%;
+    left: 48%;
+    width: 12%;
+    height: 24%;
+  }
+  .room .flower-mid:hover {
+    top: 35%;
+  }
+  .room .flower-right {
+    top: 44%;
+  }
+  .room .dresser {
+    top: 35%;
   }
 }
 @media (min-width: 667px) and (min-height: 600px) {
@@ -217,7 +312,44 @@ body {
     top: 10%;
   }
   .room {
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
+  }
+}
+@media (max-width: 380px) {
+  .room {
+    width: 350px;
+    height: 350px;
+  }
+  .room .floor {
+    width: 100%;
+    height: 55%;
+  }
+  .room .wall-left {
+    top: 14%;
+    left: -3%;
+    width: 60%;
+    height: 55%;
+  }
+  .room .wall-right {
+    top: 14%;
+    left: 50%;
+    width: 50%;
+    height: 54%;
+  }
+  .room .flower-left {
+    top: 37%;
+  }
+  .room .flower-mid {
+    top: 34%;
+  }
+  .room .flower-mid:hover {
+    top: 35%;
+  }
+  .room .flower-right {
+    top: 44%;
+  }
+  .room .dresser {
+    top: 35%;
   }
 }/*# sourceMappingURL=style.css.map */

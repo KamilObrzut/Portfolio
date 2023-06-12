@@ -25,7 +25,22 @@
       height: 54%;
     }
     .flower-left {
-      top: 41%;
+      top: 37%;
+    }
+    .flower-mid {
+      top: 34%;
+      left: 48%;
+      width: 12%;
+      height: 24%;
+    }
+    .flower-mid:hover {
+      top: calc(34% + 1%);
+    }
+    .flower-right {
+      top: 44%;
+    }
+    .dresser {
+      top: 35%;
     }
   }
 }
@@ -35,7 +50,45 @@
     top: 10%;
   }
   .room {
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
+  }
+}
+
+@media (max-width: 380px) {
+  .room {
+    width: 350px;
+    height: 350px;
+    .floor {
+      width: 100%;
+      height: 55%;
+    }
+    .wall-left {
+      top: 14%;
+      left: -3%;
+      width: 60%;
+      height: 55%;
+    }
+    .wall-right {
+      top: 14%;
+      left: 50%;
+      width: 50%;
+      height: 54%;
+    }
+    .flower-left {
+      top: 37%;
+    }
+    .flower-mid {
+      top: 34%;
+    }
+    .flower-mid:hover {
+      top: calc(34% + 1%);
+    }
+    .flower-right {
+      top: 44%;
+    }
+    .dresser {
+      top: 35%;
+    }
   }
 }
