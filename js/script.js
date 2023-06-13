@@ -1,8 +1,7 @@
-const done = document.querySelector(".done");
-const btnDone = document.querySelector(".btn-done");
+const btnRefresh = document.querySelector(".btn-refresh");
 
-const showDone = () => {
-  done.classList.toggle("disable");
+const refresh = () => {
+  location.reload();
 };
 
-btnDone.addEventListener("click", showDone);
+btnRefresh.addEventListener("click", refresh);

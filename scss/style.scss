@@ -17,9 +17,9 @@ body {
   background-repeat: no-repeat;
 }
 
-.btn-done {
+.btn-refresh {
   position: fixed;
-  top: 20%;
+  top: 10%;
   padding: 10px 30px;
   font-size: 1.4rem;
   background-color: transparent;
@@ -30,24 +30,9 @@ body {
   z-index: 11;
 }
 
-.btn-done:hover {
+.btn-refresh:hover {
   background-color: white;
   color: black;
-}
-
-.done {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../img/done.jpg");
-  background-position: center;
-  background-size: 170%;
-  background-repeat: no-repeat;
-  z-index: 10;
-}
-
-.disable {
-  display: none;
 }
 
 .room {
@@ -56,7 +41,6 @@ body {
   align-items: flex-end;
   width: 400px;
   height: 500px;
-  //background-color: red;
   .floor {
     width: 100%;
     height: 45%;
@@ -75,7 +59,7 @@ body {
       background-position: bottom;
       background-size: 100%;
       background-repeat: no-repeat;
-      animation: floor-wood 0.5s ease 1s forwards;
+      animation: fall-low 0.5s ease 1s forwards;
       z-index: -9;
       opacity: 0;
     }
@@ -91,7 +75,43 @@ body {
     background-position: bottom;
     background-size: 100%;
     background-repeat: no-repeat;
-    animation: wall-left 0.5s ease-out 1.3s forwards;
+    animation: fall-low 0.5s ease-out 1.3s forwards;
+    .picture-one {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      width: 25%;
+      height: 45%;
+      background-image: url("../img/picture-one.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 15;
+      animation: grow 1s ease-out 2.7s forwards;
+      transition: background-image 0.5s;
+      opacity: 0;
+    }
+    .picture-one:hover {
+      background-image: url("../img/picture-one-hover.png");
+    }
+    .picture-two {
+      position: absolute;
+      top: 13%;
+      left: 52%;
+      width: 25%;
+      height: 45%;
+      background-image: url("../img/picture-two.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 15;
+      animation: grow 1s ease-out 2.9s forwards;
+      transition: background-image 0.5s;
+      opacity: 0;
+    }
+    .picture-two:hover {
+      background-image: url("../img/picture-two-hover.png");
+    }
   }
   .wall-right {
     position: absolute;
@@ -105,7 +125,7 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     z-index: -5;
-    animation: wall-left 0.5s ease-out 1.5s forwards;
+    animation: fall-low 0.5s ease-out 1.5s forwards;
   }
   .flower-left {
     position: absolute;
@@ -117,7 +137,7 @@ body {
     background-position: bottom;
     background-size: 100%;
     background-repeat: no-repeat;
-    animation: flower-left 0.5s ease-out 1.7s forwards;
+    animation: fall-low 0.5s ease-out 1.6s forwards;
     transition: left 1s;
     opacity: 0;
     z-index: 2;
@@ -135,7 +155,7 @@ body {
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    animation: flower-mid 0.5s ease-out 1.9s forwards;
+    animation: fall-low 0.5s ease-out 2s forwards;
     transition: top 1s;
     opacity: 0;
   }
@@ -152,30 +172,211 @@ body {
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    animation: flower-mid 0.5s ease-out 1.8s forwards;
+    animation: fall-low 0.5s ease-out 1.9s forwards;
     transition: left 1s;
     opacity: 0;
+    z-index: 2;
   }
   .flower-right:hover {
     left: calc(79% - 1%);
   }
   .dresser {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 17%;
     width: 33%;
-    height: 33%;
+    height: 22%;
     background-image: url("../img/dresser.png");
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     z-index: 1;
-    animation: dresser 0.5s ease-out 1.5s forwards;
+    animation: fall-low 0.5s ease-out 1.9s forwards;
     transition: background-image 1s;
     opacity: 0;
   }
   .dresser:hover {
     background-image: url("../img/dresser-hover.png");
+  }
+  .chair {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    width: 14%;
+    height: 18%;
+    background-image: url("../img/chair.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: fall-normal 0.5s ease-out 2s forwards;
+    transition: left 1s;
+    opacity: 0;
+    z-index: 2;
+  }
+  .chair:hover {
+    left: calc(25% + 2%);
+  }
+  .sofa {
+    position: absolute;
+    top: 52%;
+    left: 54%;
+    width: 33%;
+    height: 30%;
+    background-image: url("../img/sofa.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: fall-low 0.5s ease-out 2.1s forwards;
+    transition: left 1s;
+    opacity: 0;
+  }
+  .table {
+    position: absolute;
+    top: 62%;
+    left: 22%;
+    width: 43%;
+    height: 32%;
+    background-image: url("../img/table.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: fall-low 0.5s ease-out 2.2s forwards;
+    opacity: 0;
+    .havoc {
+      position: absolute;
+      top: 38%;
+      left: 48%;
+      width: 34%;
+      height: 22%;
+      background-image: url("../img/havoc.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 3;
+      animation: grow 1s ease-out 4s forwards;
+      transition: background-image 0.5s;
+      opacity: 0;
+    }
+    .havoc:hover {
+      background-image: url("../img/havoc-hover.png");
+    }
+    .keyboard {
+      position: absolute;
+      top: 22%;
+      left: 25%;
+      width: 20%;
+      height: 20%;
+      background-image: url("../img/keyboard.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 10;
+      animation: grow 1s ease-out 3.6s forwards;
+      transition: background-image 0.5s;
+      opacity: 0;
+    }
+    .keyboard:hover {
+      background-image: url("../img/keyboard-hover.png");
+    }
+    .mouse {
+      position: absolute;
+      top: 35%;
+      left: 42%;
+      width: 5%;
+      height: 5%;
+      background-image: url("../img/mouse.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 11;
+      animation: grow 0.5s ease-out 3.4s forwards;
+      transition: background-image 0.5s;
+      opacity: 0;
+    }
+    .mouse:hover {
+      background-image: url("../img/mouse-hover.png");
+    }
+    .monitor-one {
+      position: absolute;
+      top: -3%;
+      left: 45%;
+      width: 25%;
+      height: 45%;
+      background-image: url("../img/monitor-one.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 5;
+      animation: fall-normal 1s ease-out 2.8s forwards;
+      opacity: 0;
+      .screen-one {
+        position: absolute;
+        top: 3%;
+        left: 6%;
+        width: 90%;
+        height: 90%;
+        background-image: url("../img/screen-one.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 6;
+        transition: background-image 1s;
+      }
+      .screen-one:hover {
+        background-image: url("../img/screen-one-hover.png");
+      }
+    }
+    .monitor-two {
+      position: absolute;
+      top: -13%;
+      left: 23%;
+      width: 28%;
+      height: 47%;
+      background-image: url("../img/monitor-two.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 5;
+      animation: fall-normal 1s ease-out 2.5s forwards;
+      opacity: 0;
+      .screen-two {
+        position: absolute;
+        top: 0%;
+        left: 4%;
+        width: 90%;
+        height: 90%;
+        background-image: url("../img/screen-two.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 6;
+        transition: background-image 1s;
+      }
+      .screen-two:hover {
+        background-image: url("../img/screen-two-hover.png");
+      }
+    }
+    .flower-small {
+      position: absolute;
+      top: 23%;
+      left: 82%;
+      width: 13%;
+      height: 25%;
+      background-image: url("../img/flower-small.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: 5;
+      animation: grow 1s ease-out 4.1s forwards;
+      opacity: 0;
+      transition: left 0.3s;
+    }
+    .flower-small:hover {
+      left: calc(82% - 1%);
+    }
   }
 }
 

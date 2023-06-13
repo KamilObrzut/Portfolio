@@ -23,7 +23,7 @@
     transform: scale(1);
   }
 }
-@keyframes floor-wood {
+@keyframes fall-low {
   0% {
     transform: translateY(-500%);
   }
@@ -32,55 +32,42 @@
     opacity: 1;
   }
 }
-@keyframes wall-left {
+@keyframes fall-normal {
   0% {
-    transform: translateY(-500%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes wall-right {
-  0% {
-    transform: translateY(-500%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes flower-left {
-  0% {
-    transform: translateY(-500%);
+    transform: translateY(-2000%);
   }
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes flower-mid {
+@keyframes fall-high {
   0% {
-    transform: translateY(-500%);
+    transform: translateY(-20000%);
   }
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes flower-right {
+@keyframes grow {
   0% {
-    transform: translateY(-500%);
-  }
-  100% {
-    transform: translateY(0);
+    transform: scale(0);
     opacity: 1;
   }
-}
-@keyframes dresser {
-  0% {
-    transform: translateY(-500%);
+  60% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -100,9 +87,9 @@ body {
   background-repeat: no-repeat;
 }
 
-.btn-done {
+.btn-refresh {
   position: fixed;
-  top: 20%;
+  top: 10%;
   padding: 10px 30px;
   font-size: 1.4rem;
   background-color: transparent;
@@ -113,24 +100,9 @@ body {
   z-index: 11;
 }
 
-.btn-done:hover {
+.btn-refresh:hover {
   background-color: white;
   color: black;
-}
-
-.done {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../img/done.jpg");
-  background-position: center;
-  background-size: 170%;
-  background-repeat: no-repeat;
-  z-index: 10;
-}
-
-.disable {
-  display: none;
 }
 
 .room {
@@ -159,7 +131,7 @@ body {
   background-position: bottom;
   background-size: 100%;
   background-repeat: no-repeat;
-  animation: floor-wood 0.5s ease 1s forwards;
+  animation: fall-low 0.5s ease 1s forwards;
   z-index: -9;
   opacity: 0;
 }
@@ -174,7 +146,43 @@ body {
   background-position: bottom;
   background-size: 100%;
   background-repeat: no-repeat;
-  animation: wall-left 0.5s ease-out 1.3s forwards;
+  animation: fall-low 0.5s ease-out 1.3s forwards;
+}
+.room .wall-left .picture-one {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 25%;
+  height: 45%;
+  background-image: url("../img/picture-one.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 15;
+  animation: grow 1s ease-out 2.7s forwards;
+  transition: background-image 0.5s;
+  opacity: 0;
+}
+.room .wall-left .picture-one:hover {
+  background-image: url("../img/picture-one-hover.png");
+}
+.room .wall-left .picture-two {
+  position: absolute;
+  top: 13%;
+  left: 52%;
+  width: 25%;
+  height: 45%;
+  background-image: url("../img/picture-two.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 15;
+  animation: grow 1s ease-out 2.9s forwards;
+  transition: background-image 0.5s;
+  opacity: 0;
+}
+.room .wall-left .picture-two:hover {
+  background-image: url("../img/picture-two-hover.png");
 }
 .room .wall-right {
   position: absolute;
@@ -188,7 +196,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: -5;
-  animation: wall-left 0.5s ease-out 1.5s forwards;
+  animation: fall-low 0.5s ease-out 1.5s forwards;
 }
 .room .flower-left {
   position: absolute;
@@ -200,7 +208,7 @@ body {
   background-position: bottom;
   background-size: 100%;
   background-repeat: no-repeat;
-  animation: flower-left 0.5s ease-out 1.7s forwards;
+  animation: fall-low 0.5s ease-out 1.6s forwards;
   transition: left 1s;
   opacity: 0;
   z-index: 2;
@@ -218,7 +226,7 @@ body {
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  animation: flower-mid 0.5s ease-out 1.9s forwards;
+  animation: fall-low 0.5s ease-out 2s forwards;
   transition: top 1s;
   opacity: 0;
 }
@@ -235,38 +243,216 @@ body {
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  animation: flower-mid 0.5s ease-out 1.8s forwards;
+  animation: fall-low 0.5s ease-out 1.9s forwards;
   transition: left 1s;
   opacity: 0;
+  z-index: 2;
 }
 .room .flower-right:hover {
   left: 78%;
 }
 .room .dresser {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 17%;
   width: 33%;
-  height: 33%;
+  height: 22%;
   background-image: url("../img/dresser.png");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: 1;
-  animation: dresser 0.5s ease-out 1.5s forwards;
+  animation: fall-low 0.5s ease-out 1.9s forwards;
   transition: background-image 1s;
   opacity: 0;
 }
 .room .dresser:hover {
   background-image: url("../img/dresser-hover.png");
 }
+.room .chair {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  width: 14%;
+  height: 18%;
+  background-image: url("../img/chair.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: fall-normal 0.5s ease-out 2s forwards;
+  transition: left 1s;
+  opacity: 0;
+  z-index: 2;
+}
+.room .chair:hover {
+  left: 27%;
+}
+.room .sofa {
+  position: absolute;
+  top: 52%;
+  left: 54%;
+  width: 33%;
+  height: 30%;
+  background-image: url("../img/sofa.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: fall-low 0.5s ease-out 2.1s forwards;
+  transition: left 1s;
+  opacity: 0;
+}
+.room .table {
+  position: absolute;
+  top: 62%;
+  left: 22%;
+  width: 43%;
+  height: 32%;
+  background-image: url("../img/table.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  animation: fall-low 0.5s ease-out 2.2s forwards;
+  opacity: 0;
+}
+.room .table .havoc {
+  position: absolute;
+  top: 38%;
+  left: 48%;
+  width: 34%;
+  height: 22%;
+  background-image: url("../img/havoc.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 3;
+  animation: grow 1s ease-out 4s forwards;
+  transition: background-image 0.5s;
+  opacity: 0;
+}
+.room .table .havoc:hover {
+  background-image: url("../img/havoc-hover.png");
+}
+.room .table .keyboard {
+  position: absolute;
+  top: 22%;
+  left: 25%;
+  width: 20%;
+  height: 20%;
+  background-image: url("../img/keyboard.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 10;
+  animation: grow 1s ease-out 3.6s forwards;
+  transition: background-image 0.5s;
+  opacity: 0;
+}
+.room .table .keyboard:hover {
+  background-image: url("../img/keyboard-hover.png");
+}
+.room .table .mouse {
+  position: absolute;
+  top: 35%;
+  left: 42%;
+  width: 5%;
+  height: 5%;
+  background-image: url("../img/mouse.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 11;
+  animation: grow 0.5s ease-out 3.4s forwards;
+  transition: background-image 0.5s;
+  opacity: 0;
+}
+.room .table .mouse:hover {
+  background-image: url("../img/mouse-hover.png");
+}
+.room .table .monitor-one {
+  position: absolute;
+  top: -3%;
+  left: 45%;
+  width: 25%;
+  height: 45%;
+  background-image: url("../img/monitor-one.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 5;
+  animation: fall-normal 1s ease-out 2.8s forwards;
+  opacity: 0;
+}
+.room .table .monitor-one .screen-one {
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  width: 90%;
+  height: 90%;
+  background-image: url("../img/screen-one.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 6;
+  transition: background-image 1s;
+}
+.room .table .monitor-one .screen-one:hover {
+  background-image: url("../img/screen-one-hover.png");
+}
+.room .table .monitor-two {
+  position: absolute;
+  top: -13%;
+  left: 23%;
+  width: 28%;
+  height: 47%;
+  background-image: url("../img/monitor-two.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 5;
+  animation: fall-normal 1s ease-out 2.5s forwards;
+  opacity: 0;
+}
+.room .table .monitor-two .screen-two {
+  position: absolute;
+  top: 0%;
+  left: 4%;
+  width: 90%;
+  height: 90%;
+  background-image: url("../img/screen-two.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 6;
+  transition: background-image 1s;
+}
+.room .table .monitor-two .screen-two:hover {
+  background-image: url("../img/screen-two-hover.png");
+}
+.room .table .flower-small {
+  position: absolute;
+  top: 23%;
+  left: 82%;
+  width: 13%;
+  height: 25%;
+  background-image: url("../img/flower-small.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 5;
+  animation: grow 1s ease-out 4.1s forwards;
+  opacity: 0;
+  transition: left 0.3s;
+}
+.room .table .flower-small:hover {
+  left: 81%;
+}
 
 @media (min-width: 667px) {
-  .btn-done {
+  .btn-refresh {
     top: 5%;
-  }
-  .done {
-    background-size: 100%;
   }
   .room {
     width: 400px;
@@ -304,11 +490,33 @@ body {
     top: 44%;
   }
   .room .dresser {
-    top: 35%;
+    height: 28%;
+    top: 38%;
+  }
+  .room .chair {
+    top: 65%;
+  }
+  .room .sofa {
+    top: 44%;
+  }
+  .room .table {
+    top: 56%;
+  }
+  .room .table .keyboard {
+    top: 17%;
+  }
+  .room .table .monitor-one {
+    top: -10%;
+  }
+  .room .table .monitor-two {
+    top: -23%;
+  }
+  .room .table .flower-small {
+    top: 20%;
   }
 }
 @media (min-width: 667px) and (min-height: 600px) {
-  .btn-done {
+  .btn-refresh {
     top: 10%;
   }
   .room {
@@ -350,6 +558,25 @@ body {
     top: 44%;
   }
   .room .dresser {
-    top: 35%;
+    height: 28%;
+    top: 38%;
+  }
+  .room .chair {
+    top: 65%;
+  }
+  .room .sofa {
+    top: 45%;
+  }
+  .room .table {
+    top: 56%;
+  }
+  .room .table .monitor-one {
+    top: -10%;
+  }
+  .room .table .monitor-two {
+    top: -23%;
+  }
+  .room .table .flower-small {
+    top: 20%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,9 +1,6 @@
 @media (min-width: 667px) {
-  .btn-done {
+  .btn-refresh {
     top: 5%;
-  }
-  .done {
-    background-size: 100%;
   }
   .room {
     width: 400px;
@@ -40,13 +37,35 @@
       top: 44%;
     }
     .dresser {
-      top: 35%;
+      height: 28%;
+      top: 38%;
+    }
+    .chair {
+      top: 65%;
+    }
+    .sofa {
+      top: 44%;
+    }
+    .table {
+      top: 56%;
+      .keyboard {
+        top: 17%;
+      }
+      .monitor-one {
+        top: -10%;
+      }
+      .monitor-two {
+        top: -23%;
+      }
+      .flower-small {
+        top: 20%;
+      }
     }
   }
 }
 
 @media (min-width: 667px) and (min-height: 600px) {
-  .btn-done {
+  .btn-refresh {
     top: 10%;
   }
   .room {
@@ -88,7 +107,26 @@
       top: 44%;
     }
     .dresser {
-      top: 35%;
+      height: 28%;
+      top: 38%;
+    }
+    .chair {
+      top: 65%;
+    }
+    .sofa {
+      top: 45%;
+    }
+    .table {
+      top: 56%;
+      .monitor-one {
+        top: -10%;
+      }
+      .monitor-two {
+        top: -23%;
+      }
+      .flower-small {
+        top: 20%;
+      }
     }
   }
 }
