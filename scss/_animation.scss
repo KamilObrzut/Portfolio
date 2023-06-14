@@ -95,3 +95,17 @@
     transform: scale(0.8);
   }
 }
+
+@keyframes popup-small {
+  0% {
+    height: 0px;
+    width: 0px;
+  }
+  50% {
+    height: 50px;
+    width: 20px;
+  }
+  100% {
+    width: 100px;
+  }
+}

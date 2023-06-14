@@ -1,5 +1,6 @@
 @use "./reset" as reset;
 @use "./animation" as animation;
+@use "./popup" as popup;
 
 html {
   font-size: 10px;
@@ -49,7 +50,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   transition: background-image 0.5s;
-  animation: logo 5s ease 6s infinite;
+  animation: logo 5s ease 4s infinite;
   z-index: 20;
   opacity: 0;
 }
