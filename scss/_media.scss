@@ -1,6 +1,6 @@
 @media (min-width: 667px) {
-  .btn-refresh {
-    top: 5%;
+  .logo {
+    top: 0vh;
   }
   .room {
     width: 400px;
@@ -65,8 +65,10 @@
 }
 
 @media (min-width: 667px) and (min-height: 600px) {
-  .btn-refresh {
-    top: 10%;
+  .logo {
+    top: 2vh;
+    width: 100px;
+    height: 75px;
   }
   .room {
     width: 800px;
@@ -75,6 +77,9 @@
 }
 
 @media (max-width: 380px) {
+  .logo {
+    top: 10vh;
+  }
   .room {
     width: 350px;
     height: 350px;
