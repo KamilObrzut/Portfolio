@@ -39,23 +39,86 @@ btnRefresh.addEventListener("click", refresh);
 const allElements = document.querySelectorAll(".clicked");
 const popupSmall = document.querySelector(".popup-small");
 
+let clickedElement = null;
+const hideObjects = [];
+
 allElements.forEach((object) => {
   object.addEventListener("click", (event) => {
-    const clickedElement = event.currentTarget;
+    clickedElement = event.currentTarget;
     const { top, left, width, height } = clickedElement.getBoundingClientRect();
-    const popupWidth = 100;
+    const popupWidth = 70;
     const popupHeight = 50;
-    const popupTop = top + height / 2 - popupHeight / 2;
-    const popupLeft = left + width / 2 - popupWidth / 2;
+    if (object.classList.contains("flower-left")) {
+      const popupTop = top + height / 2 - popupHeight / 2;
+      const popupLeft = left + width / 2 - popupWidth / 2 + 60;
 
-    popupSmall.style.top = `${popupTop}px`;
-    popupSmall.style.left = `${popupLeft}px`;
-    popupSmall.classList.toggle("active");
+      popupSmall.style.top = `${popupTop}px`;
+      popupSmall.style.left = `${popupLeft}px`;
+      popupSmall.classList.toggle("active");
+    } else {
+      const popupTop = top + height / 2 - popupHeight / 2;
+      const popupLeft = left + width / 2 - popupWidth / 2;
+
+      popupSmall.style.top = `${popupTop}px`;
+      popupSmall.style.left = `${popupLeft}px`;
+      popupSmall.classList.toggle("active");
+    }
   });
+
   const tableChildren = object.querySelectorAll(".clicked");
   tableChildren.forEach((child) => {
     child.addEventListener("click", (event) => {
       event.stopPropagation();
     });
   });
+});
+
+const btnTrash = document.querySelector(".btn-trash");
+
+btnTrash.addEventListener("click", (event) => {
+  if (clickedElement.classList.contains("table")) {
+    const tableChildren = clickedElement.querySelectorAll(".clicked");
+    hideObjects.push(...tableChildren);
+  }
+  if (clickedElement.classList.contains("screen-one") || clickedElement.classList.contains("screen-two")) {
+    clickedElement.classList.add("disable");
+    clickedElement.parentElement.classList.add("disable");
+    hideObjects.push(clickedElement);
+    hideObjects.push(clickedElement.parentElement);
+  } else {
+    clickedElement.classList.add("disable");
+    hideObjects.push(clickedElement);
+  }
+  console.log(hideObjects);
+});
+
+const bin = document.querySelector(".bin");
+const hideElements = document.querySelector(".hide-elements");
+let lastHideObjectIndex = 0;
+
+const showBin = () => {
+  for (let i = lastHideObjectIndex; i < hideObjects.length; i++) {
+    const p = document.createElement("p");
+    p.textContent = hideObjects[i].getAttribute("data");
+    hideElements.appendChild(p);
+  }
+
+  bin.classList.add("active");
+};
+
+const checkHideObjects = () => {
+  if (hideObjects.length > lastHideObjectIndex) {
+    showBin();
+    lastHideObjectIndex = hideObjects.length;
+  }
+};
+
+Object.defineProperty(hideObjects, "push", {
+  configurable: true,
+  enumerable: true,
+  writable: true,
+  value: function (...items) {
+    Array.prototype.push.apply(this, items);
+    checkHideObjects();
+  },
 });

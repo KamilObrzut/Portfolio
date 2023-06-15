@@ -1,14 +1,15 @@
 .popup-small {
   display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 70px;
+  height: 50px;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 70px;
-  background-color: rgb(8, 8, 8);
+  background: rgb(15, 15, 15);
+  background: linear-gradient(0deg, rgba(15, 15, 15, 1) 0%, rgba(41, 41, 41, 1) 100%);
   border-radius: 6px;
-  z-index: 9999;
+  border-top: 1px solid greenyellow;
+  border-bottom: 1px solid rgb(145, 0, 0);
+  z-index: 99;
   animation: popup-small 0.5s ease-out forwards;
   &.active {
     display: flex;
@@ -16,24 +17,29 @@
     align-items: center;
     justify-content: center;
   }
-  .look {
+  .show {
     display: flex;
     align-items: center;
-    height: 40%;
+    height: 30%;
     display: flex;
-    .btn-look {
+    .btn-show {
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: transparent;
       border: none;
+      font-size: 0.8rem;
       .popup-text {
         color: white;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        transition: color 0.5s;
+      }
+      .popup-text:hover {
+        color: greenyellow;
       }
       .popup-v {
         margin: 3px 0 3px 10px;
-        padding: 0 3px;
+        padding: 1px 3px;
         background-color: greenyellow;
         color: black;
         border: none;
@@ -43,25 +49,81 @@
   .trash {
     display: flex;
     align-items: center;
-    height: 40%;
-    display: flex;
+    justify-content: flex-end;
+    height: 30%;
+    margin-top: 3px;
     .btn-trash {
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: transparent;
       border: none;
-      .popup-text {
+      font-size: 0.6rem;
+      margin-left: 2px;
+      .popup-text-small {
         color: white;
-        font-size: 1rem;
+        font-size: 0.6rem;
+      }
+      .popup-text-small:hover {
+        color: rgb(255, 42, 42);
       }
       .popup-x {
         margin: 3px 0 3px 10px;
-        padding: 0 3px;
+        padding: 2px 3px;
         background-color: rgb(255, 0, 0);
         color: black;
         border: none;
+        font-size: 0.8rem;
       }
     }
+  }
+}
+
+.bin {
+  display: none;
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  width: 90vw;
+  height: 140px;
+  background: rgb(15, 15, 15);
+  background: linear-gradient(0deg, rgba(15, 15, 15, 1) 0%, rgba(41, 41, 41, 1) 100%);
+  border-radius: 6px;
+  border-top: 1px solid greenyellow;
+  border-bottom: 1px solid rgb(145, 0, 0);
+  z-index: 99;
+  animation: hide-elements 0.5s ease-out forwards;
+  &.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h3 {
+    margin: 10px 0 10px 0;
+    font-size: 0.8rem;
+  }
+  .hide-elements {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    p {
+      font-size: 0.6rem;
+      margin: 5px 5px;
+    }
+  }
+  .btn-restore {
+    justify-self: flex-end;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 7px 10px;
+    color: white;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  .btn-restore:hover {
+    background-color: white;
+    color: black;
   }
 }

@@ -74,6 +74,37 @@
     width: 800px;
     height: 800px;
   }
+  .popup-small {
+    width: 90px;
+    height: 70px;
+    border-radius: 6px;
+    border-top: 1px solid greenyellow;
+    border-bottom: 1px solid rgb(145, 0, 0);
+    animation: popup-small-big-res 0.5s ease-out forwards;
+    .show {
+      .btn-show {
+        font-size: 1.2rem;
+        .popup-text {
+          font-size: 1.2rem;
+        }
+        .popup-v {
+          margin-left: 13px;
+          padding: 0 3px;
+        }
+      }
+    }
+    .trash {
+      .btn-trash {
+        font-size: 1rem;
+        .popup-text-small {
+          font-size: 1rem;
+        }
+        .popup-x {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 380px) {
