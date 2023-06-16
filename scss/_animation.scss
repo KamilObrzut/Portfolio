@@ -129,3 +129,25 @@
     width: 120px;
   }
 }
+
+@keyframes name-and-description {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}

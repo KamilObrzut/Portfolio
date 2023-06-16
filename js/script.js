@@ -1,3 +1,4 @@
+//Loading
 window.addEventListener("load", () => {
   const elementsWithBackgroundImage = document.querySelectorAll(".preload");
 
@@ -30,15 +31,17 @@ window.addEventListener("load", () => {
   });
 });
 
+// Logo/refresh
 const btnRefresh = document.querySelector(".logo");
 const refresh = () => {
   location.reload();
 };
 btnRefresh.addEventListener("click", refresh);
 
+// Small popup
 const allElements = document.querySelectorAll(".clicked");
 const popupSmall = document.querySelector(".popup-small");
-
+const btnTrash = document.querySelector(".btn-trash");
 let clickedElement = null;
 const hideObjects = [];
 
@@ -73,8 +76,7 @@ allElements.forEach((object) => {
   });
 });
 
-const btnTrash = document.querySelector(".btn-trash");
-
+// Hide elements
 btnTrash.addEventListener("click", (event) => {
   if (clickedElement.classList.contains("table")) {
     const tableChildren = clickedElement.querySelectorAll(".clicked");
@@ -89,20 +91,28 @@ btnTrash.addEventListener("click", (event) => {
     clickedElement.classList.add("disable");
     hideObjects.push(clickedElement);
   }
-  console.log(hideObjects);
+  popupSmall.classList.remove("active");
 });
 
+// Bin popup
 const bin = document.querySelector(".bin");
 const hideElements = document.querySelector(".hide-elements");
 let lastHideObjectIndex = 0;
+let addedParagraphs = [];
 
 const showBin = () => {
   for (let i = lastHideObjectIndex; i < hideObjects.length; i++) {
-    const p = document.createElement("p");
-    p.textContent = hideObjects[i].getAttribute("data");
-    hideElements.appendChild(p);
-  }
+    const dataValue = hideObjects[i].getAttribute("data");
 
+    if (addedParagraphs.includes(dataValue)) {
+      continue;
+    }
+
+    const p = document.createElement("p");
+    p.textContent = dataValue;
+    hideElements.appendChild(p);
+    addedParagraphs.push(dataValue);
+  }
   bin.classList.add("active");
 };
 
@@ -122,3 +132,34 @@ Object.defineProperty(hideObjects, "push", {
     checkHideObjects();
   },
 });
+
+// Restore elements
+const btnRestore = document.querySelector(".btn-restore");
+
+const restoreItems = () => {
+  const allHideElements = document.querySelectorAll(".disable");
+
+  allHideElements.forEach((element) => {
+    if (element.classList.contains("loading")) {
+      return;
+    } else {
+      element.classList.remove("disable");
+      bin.classList.remove("active");
+      hideElements.innerHTML = "";
+      addedParagraphs = [];
+    }
+  });
+  addedParagraphs = [];
+};
+
+btnRestore.addEventListener("click", restoreItems);
+
+//About me
+const btnCloseAboutme = document.querySelector(".btn-close-aboutme");
+const aboutMe = document.querySelector(".popup-aboutme");
+
+const closeAboutMe = () => {
+  aboutMe;
+  aboutMe.classList.remove("active");
+};
+btnCloseAboutme.addEventListener("click", closeAboutMe);

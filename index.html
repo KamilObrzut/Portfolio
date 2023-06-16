@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,900&family=Nunito:wght@200;400&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
-    <!-- <script src="https://kit.fontawesome.com/318324a275.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/318324a275.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="loading">
@@ -18,7 +18,9 @@
         <p>loading</p>
       </div>
     </div>
+    <div class="name"><h1>Kamil Obrzut</h1></div>
     <div class="logo preload"></div>
+    <div class="description"><p>Frontend Developer</p></div>
     <div class="popup-small">
       <div class="show">
         <button class="btn-show">
@@ -28,7 +30,7 @@
       </div>
       <div class="trash">
         <button class="btn-trash">
-          <p class="popup-text-small">SCHOWAJ</p>
+          <p class="popup-text-small">UKRYJ</p>
           <p class="popup-x">x</p>
         </button>
       </div>
@@ -39,12 +41,12 @@
       </div>
       <div class="wall-left preload">
         <div class="clicked picture-one preload" data="Obraz autoportret"></div>
-        <div class="clicked picture-two preload" data="Obraz projekt Lista Zakupów"></div>
+        <div class="clicked picture-two preload" data="Obraz Lista Zakupów"></div>
       </div>
       <div class="wall-right preload"></div>
-      <div class="clicked flower-left preload" data="Palma"></div>
-      <div class="clicked flower-mid preload" data="Praproć"></div>
-      <div class="clicked flower-right preload" data="Palma"></div>
+      <div class="clicked flower-left preload" data="Palma 1"></div>
+      <div class="clicked flower-mid preload" data="Paproć"></div>
+      <div class="clicked flower-right preload" data="Palma 2"></div>
       <div class="clicked dresser preload" data="Komoda"></div>
       <div class="clicked chair preload" data="Krzesło"></div>
       <div class="clicked sofa preload" data="Sofa"></div>
@@ -53,18 +55,52 @@
         <div class="clicked keyboard preload" data="Klawiatura"></div>
         <div class="clicked mouse preload" data="Myszka"></div>
         <div class="monitor-one preload">
-          <div class="clicked screen-one preload" data="Monitor"></div>
+          <div class="clicked screen-one preload" data="Monitor 1"></div>
         </div>
         <div class="monitor-two preload">
-          <div class="clicked screen-two preload" data="Monitor"></div>
+          <div class="clicked screen-two preload" data="Monitor 2"></div>
         </div>
         <div class="clicked flower-small preload" data="Kwiatek mały"></div>
       </div>
     </div>
     <div class="bin">
-      <h3>Ukryte elementy:</h3>
+      <div class="bin-top">
+        <h3>Elementy w schowku:</h3>
+      </div>
       <div class="hide-elements"></div>
       <button class="btn-restore">przywróć wszystko</button>
+    </div>
+    <div class="popup-aboutme">
+      <div class="popup-top">
+        <h2>o mnie</h2>
+        <button class="btn-close-aboutme">x</button>
+      </div>
+      <div class="content">
+        <img src="../Portfolio/img/me.png" alt="autoportet" />
+        <h4>Cześć,</h4>
+        <p>Mam na imie Kamil, jestem Frontend Developerem oraz Designerem. Na rynku wyróżnia mnie kreatywność która pozwala na nieograniczoną ilość mozliwości rozwiązania danego problemu</p>
+        <p>
+          Od 7 lat pracuje w branży IT na stonowisku administratora w firmie Aptiv oraz BorgWarner. Sprawuje opiekę nad siecią oraz zarządzam zewnetrznymi systemami korporacyjnymi. Postanowiłem jednak
+          spróbować swoich sił w świecie Frontendu
+        </p>
+        <p>Od kilkunastu lat hobbistycznie zajmuje się również grafiką komputerową tworząc projekty w Photoshopie oraz 3Ds Maxie</p>
+        <p>Nie wiem co to nuda, w mojej głowie zawsze jest kilka nowych pomysłów. Czasami potrzebuje jedynie 48 godzinnej doby aby je wszystkie zrealizować.</p>
+        <p>Po godzinach pracy lubie spędzać czas nad wodą w różnej formie. Zaczynając od wędkowania kończąc na pływaniu motorówkami lub skuterami wodnymi</p>
+        <h4>Umiejętności:</h4>
+        <ul>
+          <li>HTML</li>
+          <li>CSS/SCSS</li>
+          <li>JavaScript</li>
+          <li>Ogólna wiedza z zakresu administracji IT</li>
+          <li>Adobe Photoshop</li>
+          <li>Autodesk 3Ds Max Studio</li>
+        </ul>
+      </div>
+    </div>
+    <div class="social">
+      <div class="github"><i class="fa-brands fa-github"></i></div>
+      <div class="linkedin"><i class="fa-brands fa-linkedin"></i></div>
+      <div class="mail"><i class="fa-regular fa-envelope"></i></div>
     </div>
     <script src="js/script.js"></script>
   </body>
