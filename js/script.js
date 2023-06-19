@@ -55,9 +55,11 @@ const showPopup = (element, top, left) => {
 
   const titleDiv = popup.querySelector(".title");
   const existingHeader = titleDiv.querySelector("h4");
+
   if (existingHeader) {
     existingHeader.remove();
   }
+
   const header = document.createElement("h4");
   header.textContent = currentElement.getAttribute("data-popup");
   titleDiv.appendChild(header);
