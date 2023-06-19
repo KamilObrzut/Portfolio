@@ -52,6 +52,16 @@ const showPopup = (element, top, left) => {
   currentElement = element;
   popup.style.top = `${top}px`;
   popup.style.left = `${left}px`;
+
+  const titleDiv = popup.querySelector(".title");
+  const existingHeader = titleDiv.querySelector("h4");
+  if (existingHeader) {
+    existingHeader.remove();
+  }
+  const header = document.createElement("h4");
+  header.textContent = currentElement.getAttribute("data-popup");
+  titleDiv.appendChild(header);
+
   popup.classList.add("active");
 };
 
@@ -66,7 +76,7 @@ elements.forEach((element) => {
     }
     if (clickedElement.classList.contains("flower-left")) {
       const { top, left } = clickedElement.getBoundingClientRect();
-      showPopup(clickedElement, top + 100, left + 50);
+      showPopup(clickedElement, top, left + 50);
     } else {
       const { top, left } = clickedElement.getBoundingClientRect();
       showPopup(clickedElement, top, left);

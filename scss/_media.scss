@@ -175,12 +175,9 @@
     height: 800px;
   }
   .popup-small {
-    width: 90px;
-    height: 70px;
-    padding-right: 10px;
-    border-radius: 6px;
+    width: 120px;
+    height: 80px;
     animation: popup-small-big-res 0.5s ease-out forwards;
-
     .show {
       .btn-show {
         font-size: 1.2rem;
@@ -202,6 +199,11 @@
         .popup-x {
           font-size: 1rem;
         }
+      }
+    }
+    .title {
+      h4 {
+        font-size: 1.2rem;
       }
     }
   }
