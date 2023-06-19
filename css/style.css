@@ -833,10 +833,23 @@ body {
 @media (min-width: 667px) {
   .logo {
     top: 5vh;
+    left: 35vw;
+    width: 70px;
+    height: 40px;
+  }
+  .name {
+    top: 5vh;
+    left: 45vw;
+    font-size: 1rem;
+  }
+  .description {
+    top: 11vh;
+    left: 45vw;
+    font-size: 0.8rem;
   }
   .room {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin-bottom: 0;
   }
   .room .floor {
@@ -895,18 +908,76 @@ body {
   .room .table .flower-small {
     top: 20%;
   }
+  .bin {
+    bottom: 10%;
+    left: 78%;
+    width: 140px;
+    height: 80vh;
+  }
+  .bin .bin-top {
+    padding: 0 20px;
+  }
+  .bin .bin-top h3 {
+    margin: 20px 0 10px 0;
+    font-size: 1rem;
+  }
+  .bin .hide-elements {
+    flex-direction: column;
+  }
+  .bin .hide-elements p {
+    font-size: 0.8rem;
+    margin: 0px 5px;
+  }
+  .bin .btn-restore {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    width: 60px;
+  }
+  .social .github {
+    width: 100%;
+    height: 33%;
+  }
+  .social .github i {
+    font-size: 1.5rem;
+  }
+  .social .linkedin {
+    width: 100%;
+    height: 33%;
+  }
+  .social .linkedin i {
+    font-size: 1.5rem;
+  }
+  .social .mail {
+    width: 100%;
+    height: 33%;
+  }
+  .social .mail i {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 667px) and (min-height: 600px) {
   .logo {
     top: 3vh;
+    left: auto;
     width: 100px;
     height: 75px;
   }
   .name {
     top: 11vh;
+    left: auto;
     font-size: 1.6rem;
   }
   .description {
+    left: auto;
     top: 15vh;
     font-size: 1.4rem;
   }
@@ -1006,11 +1077,18 @@ body {
     font-size: 2.5rem;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 360px) {
   .logo {
-    top: 10vh;
+    top: 17vh;
+  }
+  .name {
+    top: 22vh;
+  }
+  .description {
+    top: 25vh;
   }
   .room {
+    top: 7vh;
     width: 350px;
     height: 350px;
   }
@@ -1063,5 +1141,8 @@ body {
   }
   .room .table .flower-small {
     top: 20%;
+  }
+  .bin {
+    bottom: 4vh;
   }
 }/*# sourceMappingURL=style.css.map */
