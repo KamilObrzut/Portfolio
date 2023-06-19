@@ -661,11 +661,12 @@
 .popup-aboutme .popup-top h2 {
   text-transform: uppercase;
   font-size: 1rem;
+  margin: 5px 0;
 }
 .popup-aboutme .popup-top .btn-close-aboutme {
   position: absolute;
   right: 10px;
-  top: 5px;
+  top: 4px;
   border: none;
   background-color: transparent;
   color: white;
@@ -679,6 +680,7 @@
   flex-direction: column;
   padding: 30px 40px;
   text-align: justify;
+  overflow-y: scroll;
 }
 .popup-aboutme .content img {
   margin: auto;
@@ -843,7 +845,7 @@ body {
     font-size: 1rem;
   }
   .description {
-    top: 11vh;
+    top: 12vh;
     left: 45vw;
     font-size: 0.8rem;
   }
@@ -964,6 +966,25 @@ body {
   .social .mail i {
     font-size: 1.5rem;
   }
+  .popup-aboutme {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+  }
+  .popup-aboutme .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-aboutme .content img {
+    width: 150px;
+    height: 150px;
+  }
+  .popup-aboutme .content h4 {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 667px) and (min-height: 600px) {
   .logo {
@@ -1076,6 +1097,29 @@ body {
   }
   .social .mail i {
     font-size: 2.5rem;
+  }
+  .popup-aboutme {
+    bottom: 10%;
+    width: 50vw;
+    height: 70vh;
+  }
+  .popup-aboutme .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-aboutme .content img {
+    width: 250px;
+    height: 250px;
+  }
+  .popup-aboutme .content h4 {
+    margin-top: 50px;
+    font-size: 1.8rem;
+  }
+  .popup-aboutme .content p {
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 360px) {

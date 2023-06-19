@@ -161,11 +161,12 @@
     h2 {
       text-transform: uppercase;
       font-size: 1rem;
+      margin: 5px 0;
     }
     .btn-close-aboutme {
       position: absolute;
       right: 10px;
-      top: 5px;
+      top: 4px;
       border: none;
       background-color: transparent;
       color: white;
@@ -180,6 +181,7 @@
     flex-direction: column;
     padding: 30px 40px;
     text-align: justify;
+    overflow-y: scroll;
     img {
       margin: auto;
       width: 150px;

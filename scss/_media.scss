@@ -11,7 +11,7 @@
     font-size: 1rem;
   }
   .description {
-    top: 11vh;
+    top: 12vh;
     left: 45vw;
     font-size: 0.8rem;
   }
@@ -129,6 +129,25 @@
       height: 33%;
       i {
         font-size: 1.5rem;
+      }
+    }
+  }
+  .popup-aboutme {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 40px;
+      text-align: justify;
+      overflow-y: scroll;
+      img {
+        width: 150px;
+        height: 150px;
+      }
+      h4 {
+        font-size: 1.2rem;
       }
     }
   }
@@ -251,6 +270,29 @@
       height: 33%;
       i {
         font-size: 2.5rem;
+      }
+    }
+  }
+  .popup-aboutme {
+    bottom: 10%;
+    width: 50vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 50px;
+      text-align: justify;
+      overflow-y: scroll;
+      img {
+        width: 250px;
+        height: 250px;
+      }
+      h4 {
+        margin-top: 50px;
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.2rem;
       }
     }
   }
