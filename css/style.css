@@ -923,6 +923,7 @@ body {
   }
   .bin .hide-elements {
     flex-direction: column;
+    min-height: 150px;
   }
   .bin .hide-elements p {
     font-size: 0.8rem;

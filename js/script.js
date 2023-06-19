@@ -39,63 +39,99 @@ const refresh = () => {
 btnRefresh.addEventListener("click", refresh);
 
 // Small popup
-const allElements = document.querySelectorAll(".clicked");
-const popupSmall = document.querySelector(".popup-small");
+const elements = document.querySelectorAll(".clicked");
+const popup = document.querySelector(".popup-small");
+const btnShow = document.querySelector(".btn-show");
 const btnTrash = document.querySelector(".btn-trash");
-let clickedElement = null;
-const hideObjects = [];
+const btnChangeColor = document.querySelector(".btn-change-color");
+const bin = document.querySelector(".bin");
 
-allElements.forEach((object) => {
-  object.addEventListener("click", (event) => {
-    clickedElement = event.currentTarget;
-    const { top, left, width, height } = clickedElement.getBoundingClientRect();
-    const popupWidth = 70;
-    const popupHeight = 50;
-    if (object.classList.contains("flower-left")) {
-      const popupTop = top + height / 2 - popupHeight / 2;
-      const popupLeft = left + width / 2 - popupWidth / 2 + 60;
+let currentElement = null;
 
-      popupSmall.style.top = `${popupTop}px`;
-      popupSmall.style.left = `${popupLeft}px`;
-      popupSmall.classList.toggle("active");
-    } else {
-      const popupTop = top + height / 2 - popupHeight / 2;
-      const popupLeft = left + width / 2 - popupWidth / 2;
+const showPopup = (element, top, left) => {
+  currentElement = element;
+  popup.style.top = `${top}px`;
+  popup.style.left = `${left}px`;
+  popup.classList.add("active");
+};
 
-      popupSmall.style.top = `${popupTop}px`;
-      popupSmall.style.left = `${popupLeft}px`;
-      popupSmall.classList.toggle("active");
+elements.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+    if (clickedElement.classList.contains("table")) {
+      const tableRect = clickedElement.getBoundingClientRect();
+      const top = tableRect.top + window.scrollY;
+      const left = tableRect.left + window.scrollX;
+      showPopup(clickedElement, top, left);
     }
-  });
-
-  const tableChildren = object.querySelectorAll(".clicked");
-  tableChildren.forEach((child) => {
-    child.addEventListener("click", (event) => {
-      event.stopPropagation();
-    });
+    if (clickedElement.classList.contains("flower-left")) {
+      const { top, left } = clickedElement.getBoundingClientRect();
+      showPopup(clickedElement, top + 100, left + 50);
+    } else {
+      const { top, left } = clickedElement.getBoundingClientRect();
+      showPopup(clickedElement, top, left);
+    }
   });
 });
 
+btnShow.addEventListener("click", () => {
+  if (currentElement) {
+    const targetClass = currentElement.dataset.target;
+    const sectionToShow = document.querySelector(`.${targetClass}`);
+    sectionToShow.classList.add("active");
+  }
+  popup.classList.remove("active");
+});
+
+btnTrash.addEventListener("click", () => {
+  if (currentElement) {
+    if (currentElement.classList.contains("table")) {
+      const tableChildren = currentElement.querySelectorAll(".clicked");
+      tableChildren.forEach((child) => {
+        const clonedChild = child.cloneNode(true);
+        bin.appendChild(clonedChild);
+        child.classList.add("disable");
+      });
+    } else {
+      const clonedElement = currentElement.cloneNode(true);
+      bin.appendChild(clonedElement);
+      currentElement.classList.add("disable");
+    }
+  }
+  popup.classList.remove("active");
+});
+
+//btnChangeColor.addEventListener("click", () => {
+//  if (currentElement) {
+//    const newColor = "path/to/new/image.jpg";
+//    currentElement.style.backgroundImage = `url(${newColor})`;
+//  }
+//  popup.classList.remove("active");
+//});
+
 // Hide elements
+const hideObjects = [];
+
 btnTrash.addEventListener("click", (event) => {
-  if (clickedElement.classList.contains("table")) {
-    const tableChildren = clickedElement.querySelectorAll(".clicked");
-    hideObjects.push(...tableChildren);
+  if (currentElement) {
+    if (currentElement.classList.contains("table")) {
+      const tableChildren = currentElement.querySelectorAll(".clicked");
+      hideObjects.push(...tableChildren);
+    }
+    if (currentElement.classList.contains("screen-one") || currentElement.classList.contains("screen-two")) {
+      currentElement.classList.add("disable");
+      currentElement.parentElement.classList.add("disable");
+      hideObjects.push(currentElement);
+      hideObjects.push(currentElement.parentElement);
+    } else {
+      currentElement.classList.add("disable");
+      hideObjects.push(currentElement);
+    }
+    popup.classList.remove("active");
   }
-  if (clickedElement.classList.contains("screen-one") || clickedElement.classList.contains("screen-two")) {
-    clickedElement.classList.add("disable");
-    clickedElement.parentElement.classList.add("disable");
-    hideObjects.push(clickedElement);
-    hideObjects.push(clickedElement.parentElement);
-  } else {
-    clickedElement.classList.add("disable");
-    hideObjects.push(clickedElement);
-  }
-  popupSmall.classList.remove("active");
 });
 
 // Bin popup
-const bin = document.querySelector(".bin");
 const hideElements = document.querySelector(".hide-elements");
 let lastHideObjectIndex = 0;
 let addedParagraphs = [];
@@ -155,11 +191,12 @@ const restoreItems = () => {
 btnRestore.addEventListener("click", restoreItems);
 
 //About me
+const pictureAboutMe = document.querySelector(".picture-one");
+
 const btnCloseAboutme = document.querySelector(".btn-close-aboutme");
 const aboutMe = document.querySelector(".popup-aboutme");
 
 const closeAboutMe = () => {
-  aboutMe;
   aboutMe.classList.remove("active");
 };
 btnCloseAboutme.addEventListener("click", closeAboutMe);
