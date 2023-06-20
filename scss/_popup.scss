@@ -168,7 +168,7 @@
       font-size: 1rem;
       margin: 5px 0;
     }
-    .btn-close-aboutme {
+    .btn-close-popup-ao {
       position: absolute;
       right: 3px;
       top: 4px;
@@ -177,7 +177,7 @@
       color: white;
       transition: 0.5s;
     }
-    .btn-close-aboutme:hover {
+    .btn-close-popup-ao:hover {
       color: #00ffa2;
     }
   }
@@ -204,6 +204,358 @@
       li {
         margin: 2px 0;
       }
+    }
+  }
+}
+
+.popup-shoping-list {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  width: 90vw;
+  height: 83vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba($color: #0e0e0e, $alpha: 0.8);
+  -webkit-box-shadow: 0px 4px 15px -2px #000000de;
+  box-shadow: 0px 4px 15px -2px #000000de;
+  z-index: 101;
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .popup-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    background-color: rgb(7, 7, 7);
+    h2 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+    .btn-close-popup-sl {
+      position: absolute;
+      right: 3px;
+      top: 4px;
+      border: none;
+      background-color: transparent;
+      color: white;
+      transition: 0.5s;
+    }
+    .btn-close-popup-sl:hover {
+      color: #00ffa2;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    align-items: center;
+    overflow-y: scroll;
+    .logo-shoping-list {
+      width: 200px;
+    }
+    h4 {
+      padding: 30px 0 15px 0;
+      font-size: 1.4rem;
+    }
+    .preview {
+      padding: 10px 0 30px 0;
+      width: 250px;
+    }
+    p {
+      padding: 20px 0;
+    }
+    .btn-show-shoping-list {
+      justify-self: flex-end;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 2px;
+      padding: 5px 7px;
+      margin: 30px 0 20px 0;
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+    .btn-show-shoping-list:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.popup-havoc {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  width: 90vw;
+  height: 83vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba($color: #0e0e0e, $alpha: 0.8);
+  -webkit-box-shadow: 0px 4px 15px -2px #000000de;
+  box-shadow: 0px 4px 15px -2px #000000de;
+  z-index: 101;
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .popup-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    background-color: rgb(7, 7, 7);
+    h2 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+    .btn-close-popup-h {
+      position: absolute;
+      right: 3px;
+      top: 4px;
+      border: none;
+      background-color: transparent;
+      color: white;
+      transition: 0.5s;
+    }
+    .btn-close-popup-h:hover {
+      color: #00ffa2;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    align-items: center;
+    overflow-y: scroll;
+    .logo-havoc {
+      width: 250px;
+    }
+    h4 {
+      padding: 30px 0 15px 0;
+      font-size: 1.4rem;
+    }
+    .preview {
+      padding: 10px 0 30px 0;
+      width: 250px;
+    }
+    p {
+      padding: 20px 0;
+    }
+    ul {
+      list-style: none;
+      li {
+        margin: 15px 0;
+      }
+    }
+    .btn-show-havoc {
+      justify-self: flex-end;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 2px;
+      padding: 5px 7px;
+      margin: 30px 0 20px 0;
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+    .btn-show-havoc:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+.popup-contact {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  width: 90vw;
+  height: 60vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba($color: #0e0e0e, $alpha: 0.8);
+  -webkit-box-shadow: 0px 4px 15px -2px #000000de;
+  box-shadow: 0px 4px 15px -2px #000000de;
+  z-index: 101;
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .popup-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    background-color: rgb(7, 7, 7);
+    h2 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+    .btn-close-popup-c {
+      position: absolute;
+      right: 3px;
+      top: 4px;
+      border: none;
+      background-color: transparent;
+      color: white;
+      transition: 0.5s;
+    }
+    .btn-close-popup-c:hover {
+      color: #00ffa2;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    align-items: center;
+    overflow-y: scroll;
+    h4 {
+      font-size: 1.4rem;
+    }
+    .contact-container {
+      margin: 40px 0;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 2px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 4px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        align-self: center;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 2px;
+        padding: 5px 7px;
+        margin-top: 20px;
+        color: white;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        transition: 0.5s;
+      }
+
+      input[type="submit"]:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+.popup-budmar {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  width: 90vw;
+  height: 83vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba($color: #0e0e0e, $alpha: 0.8);
+  -webkit-box-shadow: 0px 4px 15px -2px #000000de;
+  box-shadow: 0px 4px 15px -2px #000000de;
+  z-index: 101;
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .popup-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    background-color: rgb(7, 7, 7);
+    h2 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+    .btn-close-popup-b {
+      position: absolute;
+      right: 3px;
+      top: 4px;
+      border: none;
+      background-color: transparent;
+      color: white;
+      transition: 0.5s;
+    }
+    .btn-close-popup-b:hover {
+      color: #00ffa2;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    align-items: center;
+    overflow-y: scroll;
+    .logo-budmar {
+      width: 180px;
+    }
+    h4 {
+      padding: 30px 0 15px 0;
+      font-size: 1.4rem;
+    }
+    .preview {
+      padding: 10px 0 30px 0;
+      width: 250px;
+    }
+    p {
+      padding: 20px 0;
+    }
+    ul {
+      list-style: none;
+      li {
+        margin: 15px 0;
+      }
+    }
+    .btn-show-budmar {
+      justify-self: flex-end;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 2px;
+      padding: 5px 7px;
+      margin: 30px 0 20px 0;
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+    .btn-show-budmar:hover {
+      background-color: white;
+      color: black;
     }
   }
 }

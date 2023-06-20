@@ -44,7 +44,7 @@
       </div>
       <div class="wall-left preload">
         <div class="clicked picture-one preload" data="Obraz autoportret" data-target="popup-aboutme" data-popup="O MNIE:"></div>
-        <div class="clicked picture-two preload" data="Obraz Lista Zakupów" data-popup="LISTA ZAKUPÓW:"></div>
+        <div class="clicked picture-two preload" data="Obraz Lista Zakupów" data-target="popup-shoping-list" data-popup="LISTA ZAKUPÓW:"></div>
       </div>
       <div class="wall-right preload"></div>
       <div class="clicked flower-left preload" data="Palma 1" data-popup="PALMA:"></div>
@@ -54,17 +54,18 @@
       <div class="clicked chair preload" data="Krzesło" data-popup="KRZESŁO:"></div>
       <div class="clicked sofa preload" data="Sofa" data-popup="SOFA:"></div>
       <div class="clicked table preload" data="Stół" data-popup="STÓŁ:">
-        <div class="clicked havoc preload" data="Gra Havoc" data-popup="HAVOC:"></div>
+        <div class="clicked havoc preload" data="Gra Havoc" data-target="popup-havoc" data-popup="HAVOC:"></div>
         <div class="clicked keyboard preload" data="Klawiatura" data-popup="KLAWIATURA:"></div>
         <div class="clicked mouse preload" data="Myszka" data-popup="MYSZKA:"></div>
         <div class="monitor-one preload">
-          <div class="clicked screen-one preload" data="Monitor 1" data-popup="VSC:"></div>
+          <div class="clicked screen-one preload" data="Monitor 1" data-target="popup-budmar" data-popup="BUDMAR:"></div>
         </div>
         <div class="monitor-two preload">
-          <div class="clicked screen-two preload" data="Monitor 2" data-popup="BUDMAR:"></div>
+          <div class="clicked screen-two preload" data="Monitor 2" data-popup="VSC:"></div>
         </div>
         <div class="clicked flower-small preload" data="Kwiatek mały" data-popup="KWIATEK:"></div>
       </div>
+      <div class="clicked mailbox preload" data="Skrzynka pocztowa" data-target="popup-contact" data-popup="KONTAKT:"></div>
     </div>
     <div class="bin">
       <div class="bin-top">
@@ -76,7 +77,7 @@
     <div class="popup-aboutme">
       <div class="popup-top">
         <h2>o mnie</h2>
-        <button class="btn-close-aboutme">x</button>
+        <button class="btn-close-popup-ao">x</button>
       </div>
       <div class="content">
         <img src="../Portfolio/img/me.png" alt="autoportet" />
@@ -87,7 +88,7 @@
           Frontendu.
         </p>
         <p>Jako hobbystyczny grafik, już od wielu lat tworzę projekty w Photoshopie i 3Ds Maxie, co pozwala mi wykorzystać moją kreatywność na wielu płaszczyznach.</p>
-        <p>Po godzinach lubię tworzyć nowe projekty, majsterkować i spędzać czas nad wodą - czy to wędkując, czy też pływając łodziami motorowymi. To moje ulubione sposoby na relaks i odprężenie.</p>
+        <p>Po godzinach lubię dobry film, malowanie, majsterkowanie oraz spędzanie czasu nad wodą - czy to wędkując, czy też pływając łodziami motorowymi. To moje ulubione sposoby na relaks i odprężenie.</p>
         <h4>Umiejętności:</h4>
         <ul>
           <li>HTML</li>
@@ -97,6 +98,90 @@
           <li>Adobe Photoshop</li>
           <li>Autodesk 3Ds Max Studio</li>
         </ul>
+      </div>
+    </div>
+    <div class="popup-shoping-list">
+      <div class="popup-top">
+        <h2>Lista Zakupów</h2>
+        <button class="btn-close-popup-sl">x</button>
+      </div>
+      <div class="content">
+        <img class="logo-shoping-list" src="../Portfolio/img/shoping-list-logo.png" alt="Logo aplikacji 'Lista zakupów'" />
+        <h4>Aplikacja "Lista zakupów"</h4>
+        <p>"Lista Zakupów" Jest wygodnym narzędziem do tworzenia listy na zakupy. Posiada własną baze produktów (stale rozwijaną) oraz funkcje wyszukiwania produktów</p>
+        <img class="preview" src="../Portfolio/img/shoping-list-2.jpg" alt="Screen shoot z aplikacji Lista zakupow" />
+        <p>Podział na kategorie ułatwia zakupy w sklepie</p>
+        <img class="preview" src="../Portfolio/img/shoping-list-1.jpg" alt="Screen shoot z aplikacji Lista zakupow" />
+        <p>Po zakończeniu tworzenia listy istnieje możliwość skopiowania gotowej listy produktow podzielonych na kategorie do schowka</p>
+        <img class="preview" src="../Portfolio/img/shoping-list-3.jpg" alt="Screen shoot z aplikacji Lista zakupow" />
+        <button class="btn-show-shoping-list">zobacz aplikacje</button>
+      </div>
+    </div>
+    <div class="popup-havoc">
+      <div class="popup-top">
+        <h2>Havoc</h2>
+        <button class="btn-close-popup-h">x</button>
+      </div>
+      <div class="content">
+        <img class="logo-havoc" src="../Portfolio/img/havoc-logo.png" alt="Logo gry 'Havoc'" />
+        <h4>Gra "Havoc"</h4>
+        <p>
+          Havoc jest cyfrową grą planszową osadzoną w klimacie dark fantasy. Aktualnie gra jest w trakcie tworzenia i prezentowana zawartość to cześć tego czym będzie w przyszłości. Aktualnie dostępny jest stół walki która oparta jest na
+          kartach i systemie turowym.
+        </p>
+        <p>Celem gry jest pokonanie Twojego przeciwnika poprzez obniżenie jego punktów zdrowia do poziomu 0. Graj mądrze, twórz kombinacje i oszczedzaj karty kiedy jest taka potrzeba</p>
+        <p>Galeria:</p>
+        <img class="preview" src="../Portfolio/img/havoc-1.jpg" alt="Screen shoot z gry Havoc" />
+        <img class="preview" src="../Portfolio/img/havoc-2.jpg" alt="Screen shoot z gry Havoc" />
+        <img class="preview" src="../Portfolio/img/havoc-3.jpg" alt="Screen shoot z gry Havoc" />
+        <p>Co w przyszłości?</p>
+        <ul>
+          <li>1. Stworzenie prostego modelu sztucznej inteligencji która pozwoli przeciwnikowi wykonywać ruchy. Po zaimplementoweniu zasłonie również karty przeciwnika by wprowadzić element zaskoczenia.</li>
+          <li>2. Dodanie 16 przedmiotów z unikatowymi kartami walki, systemu zdobywania doświadczenia i awansowania bohatera na kolejne poziomy.</li>
+          <li>4. Dodanie ponad 12 wrogów z unikatowymi umiejętnościami.</li>
+          <li>5. Budowa mapy po której będzie można przemieszczać się swoim pionem oraz napotykać kolejnych wrogów.</li>
+        </ul>
+        <button class="btn-show-havoc">Zagraj</button>
+      </div>
+    </div>
+    <div class="popup-budmar">
+      <div class="popup-top">
+        <h2>Budmar</h2>
+        <button class="btn-close-popup-b">x</button>
+      </div>
+      <div class="content">
+        <img class="logo-budmar" src="../Portfolio/img/budmar-logo.png" alt="Logo gry 'Havoc'" />
+        <h4>Projekt strony "Budmar"</h4>
+        <p>Strona internetowa typu "one-page" dla firmy budowlanej "Budmar"</p>
+        <p>Galeria:</p>
+        <img class="preview" src="../Portfolio/img/budmar-3.jpg" alt="Screen shoot ze strony Budmar" />
+        <img class="preview" src="../Portfolio/img/budmar-1.jpg" alt="Screen shoot ze strony Budmar" />
+        <img class="preview" src="../Portfolio/img/budmar-2.jpg" alt="Screen shoot ze strony Budmar" />
+
+        <button class="btn-show-budmar">Zobacz stronę</button>
+      </div>
+    </div>
+    <div class="popup-contact">
+      <div class="popup-top">
+        <h2>Kontakt</h2>
+        <button class="btn-close-popup-c">x</button>
+      </div>
+      <div class="content">
+        <h4>Skontaktuj się ze mną</h4>
+        <div class="contact-container">
+          <form action="wyslij.php" method="post">
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" required /><br /><br />
+
+            <label for="temat">Temat:</label>
+            <input type="text" id="temat" name="temat" required /><br /><br />
+
+            <label for="tresc">Treść:</label><br />
+            <textarea id="tresc" name="tresc" rows="5" cols="30" required></textarea><br /><br />
+
+            <input type="submit" value="Wyślij" />
+          </form>
+        </div>
       </div>
     </div>
     <div class="social">

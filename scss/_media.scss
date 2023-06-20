@@ -75,6 +75,9 @@
         top: 20%;
       }
     }
+    .mailbox {
+      top: 62%;
+    }
   }
   .bin {
     bottom: 10%;
@@ -147,6 +150,72 @@
       }
       h4 {
         font-size: 1.2rem;
+      }
+    }
+  }
+  .popup-shoping-list {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 40px;
+      text-align: justify;
+      overflow-y: scroll;
+      h4 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .popup-havoc {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 40px;
+      text-align: justify;
+      overflow-y: scroll;
+      h4 {
+        font-size: 1.2rem;
+      }
+      .logo-havoc {
+        width: 300px;
+      }
+    }
+  }
+  .popup-contact {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 40px;
+      text-align: justify;
+      overflow-y: scroll;
+      h4 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .popup-budmar {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 40px;
+      text-align: justify;
+      overflow-y: scroll;
+      h4 {
+        font-size: 1.2rem;
+      }
+      .logo-havoc {
+        width: 200px;
       }
     }
   }
@@ -281,7 +350,7 @@
     .content {
       display: flex;
       flex-direction: column;
-      padding: 30px 50px;
+      padding: 30px 90px;
       text-align: justify;
       overflow-y: scroll;
       img {
@@ -299,6 +368,98 @@
         li {
           font-size: 1.3rem;
         }
+      }
+    }
+  }
+  .popup-shoping-list {
+    bottom: 10%;
+    width: 50vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 90px;
+      text-align: justify;
+      overflow-y: scroll;
+      .logo-shoping-list {
+        width: 300px;
+      }
+      .preview {
+        width: 400px;
+      }
+      h4 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .popup-havoc {
+    bottom: 10%;
+    width: 50vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 90px;
+      text-align: justify;
+      overflow-y: scroll;
+      .logo-havoc {
+        width: 450px;
+      }
+      .preview {
+        width: 400px;
+      }
+      h4 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+      ul {
+        li {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  .popup-contact {
+    bottom: 20%;
+    width: 50vw;
+    height: 60vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 90px;
+      text-align: justify;
+      overflow-y: scroll;
+      h4 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .popup-budmar {
+    bottom: 10%;
+    width: 50vw;
+    height: 70vh;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 90px;
+      text-align: justify;
+      overflow-y: scroll;
+      .logo-budmar {
+        width: 250px;
+      }
+      .preview {
+        width: 400px;
+      }
+      h4 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.3rem;
       }
     }
   }
@@ -367,6 +528,9 @@
       .flower-small {
         top: 20%;
       }
+    }
+    .mailbox {
+      top: 62%;
     }
   }
   .bin {

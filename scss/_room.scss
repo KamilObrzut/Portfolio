@@ -343,4 +343,22 @@
       left: calc(82% - 1%);
     }
   }
+  .mailbox {
+    position: absolute;
+    top: 66%;
+    left: 77%;
+    width: 20%;
+    height: 27%;
+    background-image: url("../img/mailbox.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 15;
+    animation: fall-low 0.5s ease-out 3.5s forwards;
+    opacity: 0;
+    transition: background-image 0.2s;
+  }
+  .mailbox:hover {
+    background-image: url("../img/mailbox-hover.png");
+  }
 }

@@ -352,6 +352,24 @@
 .room .table .flower-small:hover {
   left: 81%;
 }
+.room .mailbox {
+  position: absolute;
+  top: 66%;
+  left: 77%;
+  width: 20%;
+  height: 27%;
+  background-image: url("../img/mailbox.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 15;
+  animation: fall-low 0.5s ease-out 3.5s forwards;
+  opacity: 0;
+  transition: background-image 0.2s;
+}
+.room .mailbox:hover {
+  background-image: url("../img/mailbox-hover.png");
+}
 
 @keyframes floor {
   0% {
@@ -666,7 +684,7 @@
   font-size: 1rem;
   margin: 5px 0;
 }
-.popup-aboutme .popup-top .btn-close-aboutme {
+.popup-aboutme .popup-top .btn-close-popup-ao {
   position: absolute;
   right: 3px;
   top: 4px;
@@ -675,7 +693,7 @@
   color: white;
   transition: 0.5s;
 }
-.popup-aboutme .popup-top .btn-close-aboutme:hover {
+.popup-aboutme .popup-top .btn-close-popup-ao:hover {
   color: #00ffa2;
 }
 .popup-aboutme .content {
@@ -702,6 +720,355 @@
 }
 .popup-aboutme .content ul li {
   margin: 2px 0;
+}
+
+.popup-shoping-list {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  width: 90vw;
+  height: 83vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(14, 14, 14, 0.8);
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.8705882353);
+  z-index: 101;
+}
+.popup-shoping-list.active {
+  display: flex;
+  flex-direction: column;
+}
+.popup-shoping-list .popup-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 30px;
+  background-color: rgb(7, 7, 7);
+}
+.popup-shoping-list .popup-top h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.popup-shoping-list .popup-top .btn-close-popup-sl {
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
+}
+.popup-shoping-list .popup-top .btn-close-popup-sl:hover {
+  color: #00ffa2;
+}
+.popup-shoping-list .content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  text-align: justify;
+  align-items: center;
+  overflow-y: scroll;
+}
+.popup-shoping-list .content .logo-shoping-list {
+  width: 200px;
+}
+.popup-shoping-list .content h4 {
+  padding: 30px 0 15px 0;
+  font-size: 1.4rem;
+}
+.popup-shoping-list .content .preview {
+  padding: 10px 0 30px 0;
+  width: 250px;
+}
+.popup-shoping-list .content p {
+  padding: 20px 0;
+}
+.popup-shoping-list .content .btn-show-shoping-list {
+  justify-self: flex-end;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 5px 7px;
+  margin: 30px 0 20px 0;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.popup-shoping-list .content .btn-show-shoping-list:hover {
+  background-color: white;
+  color: black;
+}
+
+.popup-havoc {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  width: 90vw;
+  height: 83vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(14, 14, 14, 0.8);
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.8705882353);
+  z-index: 101;
+}
+.popup-havoc.active {
+  display: flex;
+  flex-direction: column;
+}
+.popup-havoc .popup-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 30px;
+  background-color: rgb(7, 7, 7);
+}
+.popup-havoc .popup-top h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.popup-havoc .popup-top .btn-close-popup-h {
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
+}
+.popup-havoc .popup-top .btn-close-popup-h:hover {
+  color: #00ffa2;
+}
+.popup-havoc .content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  text-align: justify;
+  align-items: center;
+  overflow-y: scroll;
+}
+.popup-havoc .content .logo-havoc {
+  width: 250px;
+}
+.popup-havoc .content h4 {
+  padding: 30px 0 15px 0;
+  font-size: 1.4rem;
+}
+.popup-havoc .content .preview {
+  padding: 10px 0 30px 0;
+  width: 250px;
+}
+.popup-havoc .content p {
+  padding: 20px 0;
+}
+.popup-havoc .content ul {
+  list-style: none;
+}
+.popup-havoc .content ul li {
+  margin: 15px 0;
+}
+.popup-havoc .content .btn-show-havoc {
+  justify-self: flex-end;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 5px 7px;
+  margin: 30px 0 20px 0;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.popup-havoc .content .btn-show-havoc:hover {
+  background-color: white;
+  color: black;
+}
+
+.popup-contact {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  width: 90vw;
+  height: 60vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(14, 14, 14, 0.8);
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.8705882353);
+  z-index: 101;
+}
+.popup-contact.active {
+  display: flex;
+  flex-direction: column;
+}
+.popup-contact .popup-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 30px;
+  background-color: rgb(7, 7, 7);
+}
+.popup-contact .popup-top h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.popup-contact .popup-top .btn-close-popup-c {
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
+}
+.popup-contact .popup-top .btn-close-popup-c:hover {
+  color: #00ffa2;
+}
+.popup-contact .content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  text-align: justify;
+  align-items: center;
+  overflow-y: scroll;
+}
+.popup-contact .content h4 {
+  font-size: 1.4rem;
+}
+.popup-contact .content .contact-container {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.popup-contact .content .contact-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.popup-contact .content .contact-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+.popup-contact .content .contact-container input[type=text],
+.popup-contact .content .contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  resize: vertical;
+}
+.popup-contact .content .contact-container input[type=submit] {
+  align-self: center;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 5px 7px;
+  margin-top: 20px;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.popup-contact .content .contact-container input[type=submit]:hover {
+  background-color: white;
+  color: black;
+}
+
+.popup-budmar {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  width: 90vw;
+  height: 83vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(14, 14, 14, 0.8);
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.8705882353);
+  z-index: 101;
+}
+.popup-budmar.active {
+  display: flex;
+  flex-direction: column;
+}
+.popup-budmar .popup-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 30px;
+  background-color: rgb(7, 7, 7);
+}
+.popup-budmar .popup-top h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.popup-budmar .popup-top .btn-close-popup-b {
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: 0.5s;
+}
+.popup-budmar .popup-top .btn-close-popup-b:hover {
+  color: #00ffa2;
+}
+.popup-budmar .content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  text-align: justify;
+  align-items: center;
+  overflow-y: scroll;
+}
+.popup-budmar .content .logo-budmar {
+  width: 180px;
+}
+.popup-budmar .content h4 {
+  padding: 30px 0 15px 0;
+  font-size: 1.4rem;
+}
+.popup-budmar .content .preview {
+  padding: 10px 0 30px 0;
+  width: 250px;
+}
+.popup-budmar .content p {
+  padding: 20px 0;
+}
+.popup-budmar .content ul {
+  list-style: none;
+}
+.popup-budmar .content ul li {
+  margin: 15px 0;
+}
+.popup-budmar .content .btn-show-budmar {
+  justify-self: flex-end;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 5px 7px;
+  margin: 30px 0 20px 0;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.popup-budmar .content .btn-show-budmar:hover {
+  background-color: white;
+  color: black;
 }
 
 html {
@@ -929,6 +1296,9 @@ body {
   .room .table .flower-small {
     top: 20%;
   }
+  .room .mailbox {
+    top: 62%;
+  }
   .bin {
     bottom: 10%;
     left: 78%;
@@ -1002,6 +1372,72 @@ body {
   }
   .popup-aboutme .content h4 {
     font-size: 1.2rem;
+  }
+  .popup-shoping-list {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+  }
+  .popup-shoping-list .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-shoping-list .content h4 {
+    font-size: 1.2rem;
+  }
+  .popup-havoc {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+  }
+  .popup-havoc .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-havoc .content h4 {
+    font-size: 1.2rem;
+  }
+  .popup-havoc .content .logo-havoc {
+    width: 300px;
+  }
+  .popup-contact {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+  }
+  .popup-contact .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-contact .content h4 {
+    font-size: 1.2rem;
+  }
+  .popup-budmar {
+    bottom: 10%;
+    width: 70vw;
+    height: 70vh;
+  }
+  .popup-budmar .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-budmar .content h4 {
+    font-size: 1.2rem;
+  }
+  .popup-budmar .content .logo-havoc {
+    width: 200px;
   }
 }
 @media (min-width: 667px) and (min-height: 600px) {
@@ -1125,7 +1561,7 @@ body {
   .popup-aboutme .content {
     display: flex;
     flex-direction: column;
-    padding: 30px 50px;
+    padding: 30px 90px;
     text-align: justify;
     overflow-y: scroll;
   }
@@ -1141,6 +1577,96 @@ body {
     font-size: 1.3rem;
   }
   .popup-aboutme .content ul li {
+    font-size: 1.3rem;
+  }
+  .popup-shoping-list {
+    bottom: 10%;
+    width: 50vw;
+    height: 70vh;
+  }
+  .popup-shoping-list .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 90px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-shoping-list .content .logo-shoping-list {
+    width: 300px;
+  }
+  .popup-shoping-list .content .preview {
+    width: 400px;
+  }
+  .popup-shoping-list .content h4 {
+    font-size: 1.8rem;
+  }
+  .popup-shoping-list .content p {
+    font-size: 1.3rem;
+  }
+  .popup-havoc {
+    bottom: 10%;
+    width: 50vw;
+    height: 70vh;
+  }
+  .popup-havoc .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 90px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-havoc .content .logo-havoc {
+    width: 450px;
+  }
+  .popup-havoc .content .preview {
+    width: 400px;
+  }
+  .popup-havoc .content h4 {
+    font-size: 1.8rem;
+  }
+  .popup-havoc .content p {
+    font-size: 1.3rem;
+  }
+  .popup-havoc .content ul li {
+    font-size: 1.3rem;
+  }
+  .popup-contact {
+    bottom: 20%;
+    width: 50vw;
+    height: 60vh;
+  }
+  .popup-contact .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 90px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-contact .content h4 {
+    font-size: 1.8rem;
+  }
+  .popup-budmar {
+    bottom: 10%;
+    width: 50vw;
+    height: 70vh;
+  }
+  .popup-budmar .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 90px;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .popup-budmar .content .logo-budmar {
+    width: 250px;
+  }
+  .popup-budmar .content .preview {
+    width: 400px;
+  }
+  .popup-budmar .content h4 {
+    font-size: 1.8rem;
+  }
+  .popup-budmar .content p {
     font-size: 1.3rem;
   }
 }
@@ -1208,6 +1734,9 @@ body {
   }
   .room .table .flower-small {
     top: 20%;
+  }
+  .room .mailbox {
+    top: 62%;
   }
   .bin {
     bottom: 4vh;

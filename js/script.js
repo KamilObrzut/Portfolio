@@ -43,8 +43,8 @@ const elements = document.querySelectorAll(".clicked");
 const popup = document.querySelector(".popup-small");
 const btnShow = document.querySelector(".btn-show");
 const btnTrash = document.querySelector(".btn-trash");
-const btnChangeColor = document.querySelector(".btn-change-color");
 const bin = document.querySelector(".bin");
+//const btnChangeColor = document.querySelector(".btn-change-color");
 
 let currentElement = null;
 
@@ -79,6 +79,10 @@ elements.forEach((element) => {
     if (clickedElement.classList.contains("flower-left")) {
       const { top, left } = clickedElement.getBoundingClientRect();
       showPopup(clickedElement, top, left + 50);
+    }
+    if (clickedElement.classList.contains("flower-right") || clickedElement.classList.contains("mailbox")) {
+      const { top, left } = clickedElement.getBoundingClientRect();
+      showPopup(clickedElement, top, left - 50);
     } else {
       const { top, left } = clickedElement.getBoundingClientRect();
       showPopup(clickedElement, top, left);
@@ -202,13 +206,27 @@ const restoreItems = () => {
 
 btnRestore.addEventListener("click", restoreItems);
 
-//About me
-const pictureAboutMe = document.querySelector(".picture-one");
-
-const btnCloseAboutme = document.querySelector(".btn-close-aboutme");
+//Close Popup
+const btnClosePopupAO = document.querySelector(".btn-close-popup-ao");
+const btnClosePopupSL = document.querySelector(".btn-close-popup-sl");
+const btnClosePopupH = document.querySelector(".btn-close-popup-h");
+const btnClosePopupC = document.querySelector(".btn-close-popup-c");
+const btnClosePopupB = document.querySelector(".btn-close-popup-b");
 const aboutMe = document.querySelector(".popup-aboutme");
+const shopingList = document.querySelector(".popup-shoping-list");
+const havoc = document.querySelector(".popup-havoc");
+const contact = document.querySelector(".popup-contact");
+const budmar = document.querySelector(".popup-budmar");
 
-const closeAboutMe = () => {
+const closePopup = () => {
   aboutMe.classList.remove("active");
+  shopingList.classList.remove("active");
+  havoc.classList.remove("active");
+  contact.classList.remove("active");
+  budmar.classList.remove("active");
 };
-btnCloseAboutme.addEventListener("click", closeAboutMe);
+btnClosePopupAO.addEventListener("click", closePopup);
+btnClosePopupSL.addEventListener("click", closePopup);
+btnClosePopupH.addEventListener("click", closePopup);
+btnClosePopupC.addEventListener("click", closePopup);
+btnClosePopupB.addEventListener("click", closePopup);
