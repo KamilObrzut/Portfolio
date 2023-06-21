@@ -109,8 +109,11 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.3s;
-    i {
-      font-size: 1.6rem;
+    a {
+      color: white;
+      i {
+        font-size: 1.6rem;
+      }
     }
   }
   .github:hover {
@@ -124,21 +127,27 @@ body {
     border-left: 1px solid black;
     border-right: 1px solid black;
     transition: 0.3s;
-    i {
-      font-size: 1.6rem;
+    a {
+      color: white;
+      i {
+        font-size: 1.6rem;
+      }
     }
   }
   .linkedin:hover {
     background-color: #0f0f0f;
   }
-  .mail {
+  .facebook {
     width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
-    i {
-      font-size: 1.6rem;
+    a {
+      color: white;
+      i {
+        font-size: 1.6rem;
+      }
     }
   }
   .mail:hover {

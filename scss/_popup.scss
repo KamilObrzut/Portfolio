@@ -77,11 +77,45 @@
       }
     }
   }
+  .change-color {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 30%;
+    width: 80%;
+    margin-top: 3px;
+    .btn-change-color {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      font-size: 0.6rem;
+      .popup-text-small {
+        color: white;
+        font-size: 0.6rem;
+      }
+      .popup-text-small:hover {
+        color: rgb(255, 42, 42);
+      }
+      .popup-x {
+        margin-left: 10px;
+        padding: 2px 3px;
+        background-color: rgb(0, 225, 255);
+        color: black;
+        border: none;
+        font-size: 0.8rem;
+      }
+    }
+  }
   .title {
     h4 {
       margin: 4px 0;
       font-size: 0.8rem;
     }
+  }
+  .disable {
+    display: none;
   }
 }
 
@@ -264,7 +298,7 @@
     }
     .preview {
       padding: 10px 0 30px 0;
-      width: 250px;
+      width: 220px;
     }
     p {
       padding: 20px 0;
@@ -280,6 +314,10 @@
       font-size: 1rem;
       text-transform: uppercase;
       transition: 0.5s;
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
     .btn-show-shoping-list:hover {
       background-color: white;
@@ -336,7 +374,7 @@
     align-items: center;
     overflow-y: scroll;
     .logo-havoc {
-      width: 250px;
+      width: 220px;
     }
     h4 {
       padding: 30px 0 15px 0;
@@ -344,7 +382,7 @@
     }
     .preview {
       padding: 10px 0 30px 0;
-      width: 250px;
+      width: 220px;
     }
     p {
       padding: 20px 0;
@@ -366,6 +404,10 @@
       font-size: 1rem;
       text-transform: uppercase;
       transition: 0.5s;
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
     .btn-show-havoc:hover {
       background-color: white;
@@ -449,7 +491,7 @@
         width: 100%;
         padding: 10px;
         border: 1px solid white;
-        border-radius: 4px;
+        border-radius: 2px;
         resize: vertical;
       }
 
@@ -530,7 +572,7 @@
     }
     .preview {
       padding: 10px 0 30px 0;
-      width: 250px;
+      width: 220px;
     }
     p {
       padding: 20px 0;

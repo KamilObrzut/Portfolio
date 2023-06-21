@@ -596,9 +596,43 @@
   border: none;
   font-size: 0.8rem;
 }
+.popup-small .change-color {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 30%;
+  width: 80%;
+  margin-top: 3px;
+}
+.popup-small .change-color .btn-change-color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  font-size: 0.6rem;
+}
+.popup-small .change-color .btn-change-color .popup-text-small {
+  color: white;
+  font-size: 0.6rem;
+}
+.popup-small .change-color .btn-change-color .popup-text-small:hover {
+  color: rgb(255, 42, 42);
+}
+.popup-small .change-color .btn-change-color .popup-x {
+  margin-left: 10px;
+  padding: 2px 3px;
+  background-color: rgb(0, 225, 255);
+  color: black;
+  border: none;
+  font-size: 0.8rem;
+}
 .popup-small .title h4 {
   margin: 4px 0;
   font-size: 0.8rem;
+}
+.popup-small .disable {
+  display: none;
 }
 
 .bin {
@@ -780,7 +814,7 @@
 }
 .popup-shoping-list .content .preview {
   padding: 10px 0 30px 0;
-  width: 250px;
+  width: 220px;
 }
 .popup-shoping-list .content p {
   padding: 20px 0;
@@ -796,6 +830,10 @@
   font-size: 1rem;
   text-transform: uppercase;
   transition: 0.5s;
+}
+.popup-shoping-list .content .btn-show-shoping-list a {
+  color: white;
+  text-decoration: none;
 }
 .popup-shoping-list .content .btn-show-shoping-list:hover {
   background-color: white;
@@ -852,7 +890,7 @@
   overflow-y: scroll;
 }
 .popup-havoc .content .logo-havoc {
-  width: 250px;
+  width: 220px;
 }
 .popup-havoc .content h4 {
   padding: 30px 0 15px 0;
@@ -860,7 +898,7 @@
 }
 .popup-havoc .content .preview {
   padding: 10px 0 30px 0;
-  width: 250px;
+  width: 220px;
 }
 .popup-havoc .content p {
   padding: 20px 0;
@@ -882,6 +920,10 @@
   font-size: 1rem;
   text-transform: uppercase;
   transition: 0.5s;
+}
+.popup-havoc .content .btn-show-havoc a {
+  color: white;
+  text-decoration: none;
 }
 .popup-havoc .content .btn-show-havoc:hover {
   background-color: white;
@@ -965,7 +1007,7 @@
   width: 100%;
   padding: 10px;
   border: 1px solid white;
-  border-radius: 4px;
+  border-radius: 2px;
   resize: vertical;
 }
 .popup-contact .content .contact-container input[type=submit] {
@@ -1043,7 +1085,7 @@
 }
 .popup-budmar .content .preview {
   padding: 10px 0 30px 0;
-  width: 250px;
+  width: 220px;
 }
 .popup-budmar .content p {
   padding: 20px 0;
@@ -1183,7 +1225,10 @@ body {
   align-items: center;
   transition: 0.3s;
 }
-.social .github i {
+.social .github a {
+  color: white;
+}
+.social .github a i {
   font-size: 1.6rem;
 }
 .social .github:hover {
@@ -1198,20 +1243,26 @@ body {
   border-right: 1px solid black;
   transition: 0.3s;
 }
-.social .linkedin i {
+.social .linkedin a {
+  color: white;
+}
+.social .linkedin a i {
   font-size: 1.6rem;
 }
 .social .linkedin:hover {
   background-color: #0f0f0f;
 }
-.social .mail {
+.social .facebook {
   width: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
 }
-.social .mail i {
+.social .facebook a {
+  color: white;
+}
+.social .facebook a i {
   font-size: 1.6rem;
 }
 .social .mail:hover {
@@ -1347,11 +1398,11 @@ body {
   .social .linkedin i {
     font-size: 1.5rem;
   }
-  .social .mail {
+  .social .facebook {
     width: 100%;
     height: 33%;
   }
-  .social .mail i {
+  .social .facebook i {
     font-size: 1.5rem;
   }
   .popup-aboutme {
@@ -1533,8 +1584,11 @@ body {
     width: 100%;
     height: 33%;
   }
-  .social .github i {
-    font-size: 2.5rem;
+  .social .github a {
+    color: white;
+  }
+  .social .github a i {
+    font-size: 2.6rem;
   }
   .social .linkedin {
     width: 100%;
@@ -1543,15 +1597,21 @@ body {
     border-bottom: 1px solid black;
     transition: 0.3s;
   }
-  .social .linkedin i {
-    font-size: 2.5rem;
+  .social .linkedin a {
+    color: white;
   }
-  .social .mail {
+  .social .linkedin a i {
+    font-size: 2.6rem;
+  }
+  .social .facebook {
     width: 100%;
     height: 33%;
   }
-  .social .mail i {
-    font-size: 2.5rem;
+  .social .facebook a {
+    color: white;
+  }
+  .social .facebook a i {
+    font-size: 2.6rem;
   }
   .popup-aboutme {
     bottom: 10%;

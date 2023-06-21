@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Kamil Obrzut - Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,12 +37,18 @@
           <p class="popup-x">x</p>
         </button>
       </div>
+      <div class="change-color">
+        <button class="btn-change-color">
+          <p class="popup-text-small">ZMIEŃ KOLOR</p>
+          <p class="popup-x">o</p>
+        </button>
+      </div>
     </div>
     <div class="room">
       <div class="floor preload">
-        <div class="floor-wood preload"></div>
+        <div class="floor-wood clicked color preload"></div>
       </div>
-      <div class="wall-left preload">
+      <div class="wall-left clicked color preload">
         <div class="clicked picture-one preload" data="Obraz autoportret" data-target="popup-aboutme" data-popup="O MNIE:"></div>
         <div class="clicked picture-two preload" data="Obraz Lista Zakupów" data-target="popup-shoping-list" data-popup="LISTA ZAKUPÓW:"></div>
       </div>
@@ -50,10 +56,10 @@
       <div class="clicked flower-left preload" data="Palma 1" data-popup="PALMA:"></div>
       <div class="clicked flower-mid preload" data="Paproć" data-popup="PAPROĆ:"></div>
       <div class="clicked flower-right preload" data="Palma 2" data-popup="PALMA:"></div>
-      <div class="clicked dresser preload" data="Komoda" data-popup="KOMODA:"></div>
+      <div class="clicked color dresser preload" data="Komoda" data-popup="KOMODA:"></div>
       <div class="clicked chair preload" data="Krzesło" data-popup="KRZESŁO:"></div>
-      <div class="clicked sofa preload" data="Sofa" data-popup="SOFA:"></div>
-      <div class="clicked table preload" data="Stół" data-popup="STÓŁ:">
+      <div class="clicked sofa color preload" data="Sofa" data-popup="SOFA:"></div>
+      <div class="clicked color table preload" data="Stół" data-popup="STÓŁ:">
         <div class="clicked havoc preload" data="Gra Havoc" data-target="popup-havoc" data-popup="HAVOC:"></div>
         <div class="clicked keyboard preload" data="Klawiatura" data-popup="KLAWIATURA:"></div>
         <div class="clicked mouse preload" data="Myszka" data-popup="MYSZKA:"></div>
@@ -65,7 +71,7 @@
         </div>
         <div class="clicked flower-small preload" data="Kwiatek mały" data-popup="KWIATEK:"></div>
       </div>
-      <div class="clicked mailbox preload" data="Skrzynka pocztowa" data-target="popup-contact" data-popup="KONTAKT:"></div>
+      <div class="clicked color mailbox preload" data="Skrzynka pocztowa" data-target="popup-contact" data-popup="KONTAKT:"></div>
     </div>
     <div class="bin">
       <div class="bin-top">
@@ -108,13 +114,13 @@
       <div class="content">
         <img class="logo-shoping-list" src="../Portfolio/img/shoping-list-logo.png" alt="Logo aplikacji 'Lista zakupów'" />
         <h4>Aplikacja "Lista zakupów"</h4>
-        <p>"Lista Zakupów" Jest wygodnym narzędziem do tworzenia listy na zakupy. Posiada własną baze produktów (stale rozwijaną) oraz funkcje wyszukiwania produktów</p>
+        <p>"Lista Zakupów" Jest wygodnym narzędziem do tworzenia listy na zakupy. Posiada własną baze produktów oraz funkcje wyszukiwania produktów</p>
         <img class="preview" src="../Portfolio/img/shoping-list-2.jpg" alt="Screen shoot z aplikacji Lista zakupow" />
         <p>Podział na kategorie ułatwia zakupy w sklepie</p>
         <img class="preview" src="../Portfolio/img/shoping-list-1.jpg" alt="Screen shoot z aplikacji Lista zakupow" />
         <p>Po zakończeniu tworzenia listy istnieje możliwość skopiowania gotowej listy produktow podzielonych na kategorie do schowka</p>
         <img class="preview" src="../Portfolio/img/shoping-list-3.jpg" alt="Screen shoot z aplikacji Lista zakupow" />
-        <button class="btn-show-shoping-list">zobacz aplikacje</button>
+        <button class="btn-show-shoping-list"><a href="http://kamilobrzut.github.io/ListaZakupow/" target="_blank">zobacz aplikacje</a></button>
       </div>
     </div>
     <div class="popup-havoc">
@@ -141,7 +147,7 @@
           <li>4. Dodanie ponad 12 wrogów z unikatowymi umiejętnościami.</li>
           <li>5. Budowa mapy po której będzie można przemieszczać się swoim pionem oraz napotykać kolejnych wrogów.</li>
         </ul>
-        <button class="btn-show-havoc">Zagraj</button>
+        <button class="btn-show-havoc"><a href="https://kamilobrzut.github.io/Havoc/index.html" target="_blank">Zagraj</a></button>
       </div>
     </div>
     <div class="popup-budmar">
@@ -158,7 +164,7 @@
         <img class="preview" src="../Portfolio/img/budmar-1.jpg" alt="Screen shoot ze strony Budmar" />
         <img class="preview" src="../Portfolio/img/budmar-2.jpg" alt="Screen shoot ze strony Budmar" />
 
-        <button class="btn-show-budmar">Zobacz stronę</button>
+        <button class="btn-show-budmar">Zobacz stronę (wkrótce)</button>
       </div>
     </div>
     <div class="popup-contact">
@@ -185,9 +191,15 @@
       </div>
     </div>
     <div class="social">
-      <div class="github"><i class="fa-brands fa-github"></i></div>
-      <div class="linkedin"><i class="fa-brands fa-linkedin"></i></div>
-      <div class="mail"><i class="fa-regular fa-envelope"></i></div>
+      <div class="github">
+        <a href="https://github.com/KamilObrzut" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <div class="linkedin">
+        <a href="https://www.linkedin.com/in/kamil-obrzut-114974229/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="facebook">
+        <a href="https://www.facebook.com/kamil.obrzut.92/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>

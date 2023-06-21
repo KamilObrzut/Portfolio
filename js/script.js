@@ -39,12 +39,17 @@ const refresh = () => {
 btnRefresh.addEventListener("click", refresh);
 
 // Small popup
+const wallRight = document.querySelector(".wall-right");
+const floorWood = document.querySelector(".floor-wood");
 const elements = document.querySelectorAll(".clicked");
 const popup = document.querySelector(".popup-small");
+const show = document.querySelector(".show");
+const trash = document.querySelector(".trash");
 const btnShow = document.querySelector(".btn-show");
 const btnTrash = document.querySelector(".btn-trash");
 const bin = document.querySelector(".bin");
-//const btnChangeColor = document.querySelector(".btn-change-color");
+const changeColor = document.querySelector(".change-color");
+const btnChangeColor = document.querySelector(".btn-change-color");
 
 let currentElement = null;
 
@@ -87,6 +92,8 @@ elements.forEach((element) => {
       const { top, left } = clickedElement.getBoundingClientRect();
       showPopup(clickedElement, top, left);
     }
+
+    changeColor.classList.add("disable");
   });
 });
 
