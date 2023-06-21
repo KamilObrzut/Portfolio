@@ -38,6 +38,7 @@
   animation: fall-low 0.5s ease 1s forwards;
   z-index: -9;
   opacity: 0;
+  transition: background-image 1s;
 }
 .room .wall-left {
   position: absolute;
@@ -51,6 +52,7 @@
   background-repeat: no-repeat;
   animation: fall-low 0.5s ease-out 1.3s forwards;
   opacity: 0;
+  transition: background-image 1s;
 }
 .room .wall-left .picture-one {
   position: absolute;
@@ -170,9 +172,6 @@
   transition: background-image 1s;
   opacity: 0;
 }
-.room .dresser:hover {
-  background-image: url("../img/dresser-hover.png");
-}
 .room .chair {
   position: absolute;
   top: 70%;
@@ -204,7 +203,7 @@
   background-repeat: no-repeat;
   z-index: 1;
   animation: fall-low 0.5s ease-out 2.1s forwards;
-  transition: left 1s;
+  transition: background-image 1s;
   opacity: 0;
 }
 .room .table {
@@ -220,6 +219,7 @@
   z-index: 1;
   animation: fall-low 0.5s ease-out 2.2s forwards;
   opacity: 0;
+  transition: background-image 1s;
 }
 .room .table .havoc {
   position: absolute;
@@ -475,10 +475,10 @@
     width: 10px;
   }
   80% {
-    width: 140px;
+    width: 160px;
   }
   100% {
-    width: 120px;
+    width: 140px;
   }
 }
 @keyframes popup-small-big-res {
@@ -491,10 +491,10 @@
     width: 20px;
   }
   80% {
-    width: 170px;
+    width: 180px;
   }
   100% {
-    width: 150px;
+    width: 170px;
   }
 }
 @keyframes name-and-description {
@@ -1517,7 +1517,7 @@ body {
     height: 800px;
   }
   .popup-small {
-    width: 120px;
+    width: 180px;
     height: 80px;
     animation: popup-small-big-res 0.5s ease-out forwards;
   }
@@ -1538,6 +1538,15 @@ body {
     font-size: 1rem;
   }
   .popup-small .trash .btn-trash .popup-x {
+    font-size: 1rem;
+  }
+  .popup-small .change-color .btn-change-color {
+    font-size: 1rem;
+  }
+  .popup-small .change-color .btn-change-color .popup-text-small {
+    font-size: 1rem;
+  }
+  .popup-small .change-color .btn-change-color .popup-x {
     font-size: 1rem;
   }
   .popup-small .title h4 {

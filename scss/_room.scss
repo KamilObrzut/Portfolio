@@ -28,6 +28,7 @@
       animation: fall-low 0.5s ease 1s forwards;
       z-index: -9;
       opacity: 0;
+      transition: background-image 1s;
     }
   }
   .wall-left {
@@ -42,6 +43,7 @@
     background-repeat: no-repeat;
     animation: fall-low 0.5s ease-out 1.3s forwards;
     opacity: 0;
+    transition: background-image 1s;
     .picture-one {
       position: absolute;
       top: 20%;
@@ -161,9 +163,6 @@
     transition: background-image 1s;
     opacity: 0;
   }
-  .dresser:hover {
-    background-image: url("../img/dresser-hover.png");
-  }
   .chair {
     position: absolute;
     top: 70%;
@@ -195,7 +194,7 @@
     background-repeat: no-repeat;
     z-index: 1;
     animation: fall-low 0.5s ease-out 2.1s forwards;
-    transition: left 1s;
+    transition: background-image 1s;
     opacity: 0;
   }
   .table {
@@ -211,6 +210,7 @@
     z-index: 1;
     animation: fall-low 0.5s ease-out 2.2s forwards;
     opacity: 0;
+    transition: background-image 1s;
     .havoc {
       position: absolute;
       top: 38%;

@@ -243,7 +243,7 @@
     height: 800px;
   }
   .popup-small {
-    width: 120px;
+    width: 180px;
     height: 80px;
     animation: popup-small-big-res 0.5s ease-out forwards;
     .show {
@@ -260,6 +260,17 @@
     }
     .trash {
       .btn-trash {
+        font-size: 1rem;
+        .popup-text-small {
+          font-size: 1rem;
+        }
+        .popup-x {
+          font-size: 1rem;
+        }
+      }
+    }
+    .change-color {
+      .btn-change-color {
         font-size: 1rem;
         .popup-text-small {
           font-size: 1rem;

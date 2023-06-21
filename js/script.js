@@ -146,13 +146,35 @@ btnTrash.addEventListener("click", () => {
   document.removeEventListener("click", closePopup);
 });
 
-//btnChangeColor.addEventListener("click", () => {
-//  if (currentElement) {
-//    const newColor = "path/to/new/image.jpg";
-//    currentElement.style.backgroundImage = `url(${newColor})`;
-//  }
-//  popup.classList.remove("active");
-//});
+let isBackgroundChanged = false;
+
+btnChangeColor.addEventListener("click", () => {
+  if (currentElement) {
+    const computedStyle = getComputedStyle(currentElement);
+    const currentBackground = computedStyle.backgroundImage;
+
+    if (currentBackground.includes("2.png")) {
+      const originalBackground = currentBackground.replace(/2\.png"/g, '.png"');
+      currentElement.style.backgroundImage = originalBackground;
+    } else {
+      const newBackground = `${currentBackground.slice(0, -6)}2.png")`;
+      currentElement.style.backgroundImage = newBackground;
+    }
+
+    isBackgroundChanged = !currentBackground.includes("2.png");
+  }
+  popup.classList.remove("active");
+});
+
+elements.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+    currentElement = clickedElement;
+
+    const computedStyle = getComputedStyle(currentElement);
+    isBackgroundChanged = !computedStyle.backgroundImage.includes("2.png");
+  });
+});
 
 // Hide elements
 const hideObjects = [];
