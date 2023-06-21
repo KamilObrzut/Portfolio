@@ -39,7 +39,7 @@ const refresh = () => {
 btnRefresh.addEventListener("click", refresh);
 
 // Small popup
-const wallRight = document.querySelector(".wall-right");
+const wallLeft = document.querySelector(".wall-left");
 const floorWood = document.querySelector(".floor-wood");
 const elements = document.querySelectorAll(".clicked");
 const popup = document.querySelector(".popup-small");
@@ -70,22 +70,42 @@ const showPopup = (element, top, left) => {
   titleDiv.appendChild(header);
 
   popup.classList.add("active");
+
+  changeColor.classList.add("disable");
+  show.classList.add("disable");
+  trash.classList.add("disable");
+  if (element.classList.contains("color")) {
+    changeColor.classList.remove("disable");
+  }
+  if (element.hasAttribute("data-target")) {
+    show.classList.remove("disable");
+  }
+  if (element !== floorWood && element !== wallLeft) {
+    trash.classList.remove("disable");
+  }
+};
+
+const closePopup = (event) => {
+  if (!popup.contains(event.target)) {
+    popup.classList.remove("active");
+    document.removeEventListener("click", closePopup);
+  }
 };
 
 elements.forEach((element) => {
   element.addEventListener("click", (event) => {
-    const clickedElement = event.target;
+    event.stopPropagation();
+    const clickedElement = event.currentTarget;
+
     if (clickedElement.classList.contains("table")) {
       const tableRect = clickedElement.getBoundingClientRect();
       const top = tableRect.top + window.scrollY;
       const left = tableRect.left + window.scrollX;
       showPopup(clickedElement, top, left);
-    }
-    if (clickedElement.classList.contains("flower-left")) {
+    } else if (clickedElement.classList.contains("flower-left")) {
       const { top, left } = clickedElement.getBoundingClientRect();
       showPopup(clickedElement, top, left + 50);
-    }
-    if (clickedElement.classList.contains("flower-right") || clickedElement.classList.contains("mailbox")) {
+    } else if (clickedElement.classList.contains("flower-right") || clickedElement.classList.contains("mailbox")) {
       const { top, left } = clickedElement.getBoundingClientRect();
       showPopup(clickedElement, top, left - 50);
     } else {
@@ -93,7 +113,7 @@ elements.forEach((element) => {
       showPopup(clickedElement, top, left);
     }
 
-    changeColor.classList.add("disable");
+    document.addEventListener("click", closePopup);
   });
 });
 
@@ -104,6 +124,7 @@ btnShow.addEventListener("click", () => {
     sectionToShow.classList.add("active");
   }
   popup.classList.remove("active");
+  document.removeEventListener("click", closePopup);
 });
 
 btnTrash.addEventListener("click", () => {
@@ -122,6 +143,7 @@ btnTrash.addEventListener("click", () => {
     }
   }
   popup.classList.remove("active");
+  document.removeEventListener("click", closePopup);
 });
 
 //btnChangeColor.addEventListener("click", () => {
@@ -225,15 +247,15 @@ const havoc = document.querySelector(".popup-havoc");
 const contact = document.querySelector(".popup-contact");
 const budmar = document.querySelector(".popup-budmar");
 
-const closePopup = () => {
+const closeBigPopup = () => {
   aboutMe.classList.remove("active");
   shopingList.classList.remove("active");
   havoc.classList.remove("active");
   contact.classList.remove("active");
   budmar.classList.remove("active");
 };
-btnClosePopupAO.addEventListener("click", closePopup);
-btnClosePopupSL.addEventListener("click", closePopup);
-btnClosePopupH.addEventListener("click", closePopup);
-btnClosePopupC.addEventListener("click", closePopup);
-btnClosePopupB.addEventListener("click", closePopup);
+btnClosePopupAO.addEventListener("click", closeBigPopup);
+btnClosePopupSL.addEventListener("click", closeBigPopup);
+btnClosePopupH.addEventListener("click", closeBigPopup);
+btnClosePopupC.addEventListener("click", closeBigPopup);
+btnClosePopupB.addEventListener("click", closeBigPopup);
