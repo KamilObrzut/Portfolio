@@ -189,7 +189,7 @@
   z-index: 2;
 }
 .room .chair:hover {
-  left: 27%;
+  left: 26%;
 }
 .room .sofa {
   position: absolute;
@@ -1813,5 +1813,21 @@ body {
   }
   .bin {
     bottom: 4vh;
+  }
+}
+@media (max-width: 330px) {
+  .logo {
+    top: 17vh;
+  }
+  .name {
+    top: 22vh;
+  }
+  .description {
+    top: 25vh;
+  }
+  .room {
+    top: 10vh;
+    width: 300px;
+    height: 300px;
   }
 }/*# sourceMappingURL=style.css.map */

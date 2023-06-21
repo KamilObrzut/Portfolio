@@ -557,3 +557,20 @@
     bottom: 4vh;
   }
 }
+
+@media (max-width: 330px) {
+  .logo {
+    top: 17vh;
+  }
+  .name {
+    top: 22vh;
+  }
+  .description {
+    top: 25vh;
+  }
+  .room {
+    top: 10vh;
+    width: 300px;
+    height: 300px;
+  }
+}
